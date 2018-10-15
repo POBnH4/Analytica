@@ -13,9 +13,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine', 'ejs');
 
-MongoClient.connect(url, function(err, client) {
+MongoClient.connect(url, function(err, database) {
     if (err) throw err;
-    db = client.database('test');
+    db = database;
     app.listen(8080);
     console.log('listening on 8080');
 });
