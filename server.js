@@ -21,5 +21,5 @@ MongoClient.connect(url, function(err, database) {
 });
 
 app.get('/', function(req,res) {
-  res.render('/website.ejs')
+  res.render('/website')
 });
