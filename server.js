@@ -10,7 +10,7 @@ var db;
 
 app.use(session({ secret: 'example'}));
 app.use(bodyParser.urlencoded({ extended: true}));
-app.set('view engine', 'ejs');
+app.set('view engine', 'jade');
 
 MongoClient.connect(url, function(err, database) {
     if (err) throw err;
