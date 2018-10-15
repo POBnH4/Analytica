@@ -8,10 +8,10 @@ const app = express();
 
 var db;
 
-app.use(express.static("public"));
 app.use(session({ secret: 'example'}));
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true}));
-app.set('views engine', 'ejs');
+app.set('view engine', 'ejs');
 
 MongoClient.connect(url, function(err, database) {
     if (err) throw err;
@@ -21,5 +21,5 @@ MongoClient.connect(url, function(err, database) {
 });
 
 app.get('/', function(req,res) {
-  res.render('/website')
+  res.render('pages/website')
 });
