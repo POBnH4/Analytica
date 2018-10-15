@@ -8,6 +8,7 @@ const app = express();
 
 var db;
 
+app.use(express.static("public"));
 app.use(session({ secret: 'example'}));
 app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine', 'jade');
