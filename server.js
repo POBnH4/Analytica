@@ -4,7 +4,7 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const app = express();
-//npm install express express-session body-parser node mongodb
+//npm install express express-session body-parser node mongodb ejs
 
 var db;
 
