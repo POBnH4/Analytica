@@ -3,52 +3,48 @@
     <head>
       <title>Search</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link  rel="stylesheet" type="text/css" href="css/searchPage.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="js/searchFieldAndTables.js"></script>
     </head>
 
     <script>
 
+    function searchFieldFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("searchField");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
     </script>
-
-
 
     <body>
         <div class="topnav">
-            <input type="text" id = "searchField" placeholder="Search....">
+            <input type="text" id="searchField" onkeyup="searchFieldFunction()" placeholder="Search...." title="seach in the database">
         </div>
         <div class="container">
-    <table class="table table-bordered">
-      <thead>
-          <tr>
-            <th>KEY #</th>
-            <th>KEY TYPE</th>
-            <th>ALLOCATED TO</th>
-            <th>LOCATION</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-        </tbody>
-        </table>
-      </div>
+          <ul id="myUL">
+            <li><a href="#">Adele</a></li>
+            <li><a href="#">Agnes</a></li>
+
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
+
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Cindy</a></li>
+        </ul>
+        </div>
 
       </body>
 
@@ -67,6 +63,37 @@
               margin-top: 8px;
               margin-right: 16px;
               font-size: 17px;
+          }
+          #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+          }
+
+          #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+          }
+
+          #myUL li a:hover:not(.header) {
+            background-color: #eee;
           }
           .container{
               margin-top: 100px;
