@@ -1,10 +1,10 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/munros";
+const url = "mongodb://localhost:27017/Analytica";
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const app = express();
-//npm install
+//npm install express express-session body-parser node mongodb
 
 var db;
 
