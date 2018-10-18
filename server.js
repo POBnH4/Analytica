@@ -58,18 +58,18 @@ app.post('/dologin', function(req, res) {
 
 
 
-var collection = db.collection('Clients');  // get reference to the collection
-collection.find({Name: msg.Name}, {$exists: true}).toArray(function(err, doc) //find if a value exists
-{
-    if(doc) //if it does
-    {
-        console.log(doc); // print out what it sends back
-    }
-    else if(!doc) // if it does not
-    {
-        console.log("Not in docs");
-    }
-});
+// var collection = db.collection('Clients');  // get reference to the collection
+// collection.find({Name: msg.Name}, {$exists: true}).toArray(function(err, doc) //find if a value exists
+// {
+//     if(doc) //if it does
+//     {
+//         console.log(doc); // print out what it sends back
+//     }
+//     else if(!doc) // if it does not
+//     {
+//         console.log("Not in docs");
+//     }
+// });
 
 //            "key": "80",
 //            "keyType": "Tambour Unit",
