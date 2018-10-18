@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+const
 const url = "mongodb://localhost:27017/Analytica";
 const express = require('express');
 const session = require('express-session');
@@ -24,3 +25,24 @@ app.get('/', function(req,res) {
   res.render('pages/website') //UNCOMMENT THIS LINE TO BE REDIRECTED TO THE MAIN PAGE;
   //res.render('pages/search')
 });
+
+// ----------------------------------------------------------------------------------------
+
+
+var collection = db.collection('Clients');  // get reference to the collection
+collection.find({Name: msg.Name}, {$exists: true}).toArray(function(err, doc) //find if a value exists
+{
+    if(doc) //if it does
+    {
+        console.log(doc); // print out what it sends back
+    }
+    else if(!doc) // if it does not
+    {
+        console.log("Not in docs");
+    }
+});
+
+//            "key": "80",
+//            "keyType": "Tambour Unit",
+//            "allocatedTo": "E. Matheson",
+//            "location": "Cupboard"
