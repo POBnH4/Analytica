@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+const
 const url = "mongodb://localhost:27017/Analytica";
 const express = require('express');
 const session = require('express-session');
@@ -25,6 +26,7 @@ app.get('/', function(req,res) {
   //res.render('pages/search')
 });
 
+<<<<<<< HEAD
 
 
 
@@ -54,3 +56,25 @@ app.post('/dologin', function(req, res) {
         res.redirect('pages/website')}
   });
 });
+=======
+// ----------------------------------------------------------------------------------------
+
+
+var collection = db.collection('Clients');  // get reference to the collection
+collection.find({Name: msg.Name}, {$exists: true}).toArray(function(err, doc) //find if a value exists
+{
+    if(doc) //if it does
+    {
+        console.log(doc); // print out what it sends back
+    }
+    else if(!doc) // if it does not
+    {
+        console.log("Not in docs");
+    }
+});
+
+//            "key": "80",
+//            "keyType": "Tambour Unit",
+//            "allocatedTo": "E. Matheson",
+//            "location": "Cupboard"
+>>>>>>> 337b6c915512be74876d55a6da0235d6fb7c6d1e

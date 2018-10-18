@@ -1,5 +1,5 @@
 var keysArray;
-
+var params = {screen_name: 'nodejs'};
 $(document).ready(function() {
     $.ajax({
         type: "GET",
@@ -19,7 +19,7 @@ function searchFieldFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("searchField");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
+    ul = document.getElementById("myTR");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
@@ -30,3 +30,10 @@ function searchFieldFunction() {
         }
     }
 }
+
+<tr>
+  <th scope="row">1</th>
+  <td>Mark</td>
+  <td>Otto</td>
+  <td>@mdo</td>
+</tr>
