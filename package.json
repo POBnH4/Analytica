@@ -1,0 +1,30 @@
+{
+  "name": "analytica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/POBnH4/Analytica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/POBnH4/Analytica/issues"
+  },
+  "homepage": "https://github.com/POBnH4/Analytica#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongodb": "^2.2.36",
+    "node": "^10.12.0",
+    "session": "^0.1.0"
+  },
+  "devDependencies": {}
+}
