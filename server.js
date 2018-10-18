@@ -1,5 +1,4 @@
 const MongoClient = require('mongodb').MongoClient;
-const
 const url = "mongodb://localhost:27017/Analytica";
 const express = require('express');
 const session = require('express-session');
@@ -26,7 +25,7 @@ app.get('/', function(req,res) {
   //res.render('pages/search')
 });
 
-<<<<<<< HEAD
+
 
 
 
