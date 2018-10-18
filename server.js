@@ -40,7 +40,7 @@ app.post('/dologin', function(req, res) {
   console.log(uname);
     console.log(pword);
   db.collection('users').findOne({"username":uname}, function(err, result) {
-      
+
     if (err) throw err;//if there is an error, throw the error
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){
@@ -56,8 +56,7 @@ app.post('/dologin', function(req, res) {
         res.redirect('pages/website')}
   });
 });
-=======
-// ----------------------------------------------------------------------------------------
+
 
 
 var collection = db.collection('Clients');  // get reference to the collection
@@ -77,4 +76,3 @@ collection.find({Name: msg.Name}, {$exists: true}).toArray(function(err, doc) //
 //            "keyType": "Tambour Unit",
 //            "allocatedTo": "E. Matheson",
 //            "location": "Cupboard"
->>>>>>> 337b6c915512be74876d55a6da0235d6fb7c6d1e
