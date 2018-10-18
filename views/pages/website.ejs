@@ -165,6 +165,7 @@
 
 <div class="py-6 py-sm-8 jumbotron-codelines">
   <div class="container-lg p-responsive position-relative">
+       <form method = "POST" action = "/dologin">
     <div class="d-md-flex flex-items-center gutter-md-spacious">
       <div class="col-md-7 text-center text-md-left ">
         <img src="img/logo.png" alt="Analytica Logo" width="150" height="150" style = "margin-left:150px;" class="h000-mktg text-white lh-condensed-ultra mb-3 user-login"/>
@@ -172,17 +173,18 @@
          Key_Ms is complete Key Management System in one easy solution. It is simple to use, yet effectively manages key transactions.
         </p>
       </div>
+         
         <div class="mx-auto col-sm-8 col-md-5 hide-sm">
           <div class="rounded-1 text-gray bg-gray-light py-4 px-4 px-md-3 px-lg-4">
-            <form class="home-hero-signup js-signup-form" autocomplete="off" action="/join" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="92ti7EAFkD/BLPsFsfXFtkWn4RILHK9yzIYKN7waiHhqY1XuBhXiqKRVaFSaXd2uE4aj1jG02DnTjhqjwaEv4Q==">
+            
               <dl class="form-group">
                 <dt class="input-label">
                   <label class="form-label f5" for="user[email]">Email</label>
                 </dt>
                 <dd>
-                  <auto-check src="/signup_check/email" csrf="WxQuBxyczA2stoIZT3pvuiXbF1Q+mnR77Oa3RVs9vSk0Q8Q+rhnS8eF9tVMx055vvWesMXw4wPNwhEKm1Shz9g==">
-                    <input type="text" name="user[email]" id="user[email]" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="you@example.com" autocomplete="off" spellcheck="false">
-                  </auto-check>
+
+                    <input type="text" name="username" id="user[email]" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="you@example.com" autocomplete="off" spellcheck="false">
+                
                 </dd>
               </dl>
               <password-strength data-minimum-character-count="7" data-beginning-of-sentence="Make sure it's" data-checks="[&quot;at least 7 characters&quot;, &quot;including a number&quot;, &quot;a lowercase letter&quot;]">
@@ -191,16 +193,14 @@
                     <label class="form-label f5" for="user[password]">Password</label>
                   </dt>
                   <dd>
-                    <input type="password" name="user[password]" id="user[password]" class="form-control form-control-lg input-block" placeholder="Your password">
+                    <input type="password" name="password" id="user[password]" class="form-control form-control-lg input-block" placeholder="Your password" value ="">
+                      
                   </dd>
                 </dl>
               </password-strength>
-              <input type="hidden" name="source" class="js-signup-source" value="form-home">
-              <input type="text" name="required_field_95da" id="required_field_95da" hidden="hidden" class="form-control">
-<input type="hidden" name="timestamp" value="1539168509012" class="form-control">
-<input type="hidden" name="timestamp_secret" value="fdcdab6d231774b206f983bf9367d5a5fcb8b46aa334f9c0f5c033b4ed9908ee" class="form-control">
+              
 
-              <button class="btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block" type="submit" data-ga-click="Signup, Attempt, location:teams;">Unlock</button>
+              <button class="btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block" type="submit" name="login" data-ga-click="Signup, Attempt, location:teams;">Unlock</button>
 
 
 </form>          </div>
