@@ -53,7 +53,7 @@ app.post('/dologin', function(req, res) {
   //   else{
   //       console.log('3');
   //       res.redirect('pages/website')}
-  res.render('pages/search');
+  res.render('pages/homepage');
   });
 
 
