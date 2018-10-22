@@ -9,7 +9,7 @@
         url: "json/keys.json",
         success: function(result)
         {
-          console.log(result.keys);
+          console.log(result.keys[0]);
                 //do json stuff;
             }
         })
