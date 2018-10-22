@@ -10,9 +10,9 @@ $(document).ready(function() {
     //             //do json stuff;
     //         }
     //     }
-    console.log("Hello");
+    alert("Hello");
     })
-})
+
 
 // function searchFieldFunction() {
 //     var input, filter, ul, li, a, i;
