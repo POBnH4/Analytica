@@ -1,8 +1,8 @@
 
     (function() {
 
-      var app = angular.module('myApp', []);
-      app.controller('customersCtrl', function($scope) {
+      // var app = angular.module('myApp', []);
+      // app.controller('customersCtrl', function($scope) {
 
     $.ajax({
         type: "GET",
