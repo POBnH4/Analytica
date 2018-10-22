@@ -21,7 +21,7 @@ MongoClient.connect(url, function(err, database) {
 });
 
 app.get('/', function(req,res) {
-  res.render('pages/search') //UNCOMMENT THIS LINE TO BE REDIRECTED TO THE MAIN PAGE;
+  res.render('pages/website') //UNCOMMENT THIS LINE TO BE REDIRECTED TO THE MAIN PAGE;
   //res.render('pages/search')
 });
 
