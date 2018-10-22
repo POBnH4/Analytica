@@ -1,17 +1,9 @@
+(function() {
+  /* Variables placed inside of this function will be considered private */
 
-$(function().ready(function()) {
-    // $.ajax({
-    //     type: "GET",
-    //     url: "json/keys.json",
-    //     success: function(result)
-    //     {
-    //         console.log(result.keys);
-    //
-    //             //do json stuff;
-    //         }
-    //     }
-    console.log("Hello");
-    });
+  /* You won't see privateVar in global scope */
+  console.log("Hello")
+})();
 
 
 // function searchFieldFunction() {
