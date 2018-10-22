@@ -1,17 +1,20 @@
 
     (function() {
+
+      var app = angular.module('myApp', []);
+      app.controller('customersCtrl', function($scope) {
+
     $.ajax({
         type: "GET",
         url: "json/keys.json",
         success: function(result)
         {
-            console.log(result.keys);
-
+          console.log(result.keys);
                 //do json stuff;
             }
         })
 
-
+})
     })();
 
 
