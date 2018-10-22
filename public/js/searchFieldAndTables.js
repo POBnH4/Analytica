@@ -1,15 +1,16 @@
 
 $(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: "json/keys.json",
-        success: function(result)
-        {
-            console.log(result.keys);
-
-                //do json stuff;
-            }
-        }
+    // $.ajax({
+    //     type: "GET",
+    //     url: "json/keys.json",
+    //     success: function(result)
+    //     {
+    //         console.log(result.keys);
+    //
+    //             //do json stuff;
+    //         }
+    //     }
+    console.log("Hello");
     })
 })
 
