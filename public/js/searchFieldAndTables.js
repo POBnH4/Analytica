@@ -10,7 +10,7 @@
     //             //do json stuff;
     //         }
     //     }
-    alert("Hello");
+    console.log("Hello");
     })
 
 
