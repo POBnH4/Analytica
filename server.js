@@ -55,7 +55,6 @@ app.post('/dologin', function(req, res) {
   //       res.redirect('pages/website')}
   res.render('pages/search');
   });
-});
 
 
 
