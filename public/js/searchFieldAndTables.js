@@ -1,5 +1,5 @@
 
-(function() {
+
     // $.ajax({
     //     type: "GET",
     //     url: "json/keys.json",
@@ -11,7 +11,6 @@
     //         }
     //     }
     console.log("Hello");
-    })
 
 
 // function searchFieldFunction() {
