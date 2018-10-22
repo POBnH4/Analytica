@@ -56,6 +56,8 @@ app.post('/dologin', function(req, res) {
   //res.render('pages/homepage');
   });
 
+})
+
 
 
 // var collection = db.collection('Clients');  // get reference to the collection
