@@ -1,5 +1,13 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/Analytica_Users";
+
+const ALL_KEYS = "mongodb://localhost:27017/all_keys";
+const MASTER_KEYS = "mongodb://localhost:27017/master_keys";
+const DOOR_KEYS = "mongodb://localhost:27017/door_keys";
+const PEDESTAL_KEYS = "mongodb://localhost:27017/pedestal_keys";
+const FOB_KEYS = "mongodb://localhost:27017/fob_keys";
+const UKNOWN_KEYS = "mongodb://localhost:27017/unknown_keys";
+
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -7,6 +15,9 @@ const app = express();
 //npm install express express-session body-parser node mongodb ejs
 
 var db;
+
+var searchField = document.getElementById("search");
+var store;
 
 app.use(session({ secret: 'example'}));
 app.use(express.static("public"));
@@ -58,6 +69,18 @@ app.post('/dologin', function(req, res) {
   });
 
 })
+
+
+//all keys is a table with all the keys;
+function findData(){
+dbo.collection("ALL_KEYS").find({key: searchField}, function(err, result) {
+    if (err) throw err;
+    //store = array with data;
+    console.log(result.name);
+    db.close();
+});
+}// use store to update table
+
 
 
 
