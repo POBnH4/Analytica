@@ -16,7 +16,7 @@ const app = express();
 
 var db;
 
-var searchField = document.getElementById("#search");
+//var searchField = document.getElementById("#search");
 var store;
 
 app.use(session({ secret: 'example'}));
@@ -72,8 +72,9 @@ app.post('/dologin', function(req, res) {
 
 
 //all keys is a table with all the keys;
+// SEARCHFIELD HAS TO BE CHANGEDd;
 function findData(){
-dbo.collection("ALL_KEYS").find({key: searchField}, function(err, result) {
+dbo.collection("ALL_KEYS").find({key: "searchField"}, function(err, result) {
     if (err) throw err;
     //store = array with data;
     console.log(result.name);
