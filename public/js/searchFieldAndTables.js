@@ -9,11 +9,20 @@
         url: "json/keys.json",
         success: function(result)
         {
-          console.log(result.keys[0]);
-              scope.result.keys
+          //console.log(result.keys[0]);
+          for(var i = 0;i<result.keys.length;i++){
+
+            if(result.keys[i].keyType==("Tambour Unit")){
+              console.log(result.keys[i]);
+            }
+
+          }
+          //    $scope.keys = result.keys[0];
+              //console.log($scope.keys);
             }
         })
 
+      })
 
     })();
 
