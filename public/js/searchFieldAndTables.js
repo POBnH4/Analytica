@@ -12,7 +12,7 @@
           //console.log(result.keys[0]);
           for(var i = 0;i<result.keys.length;i++){
 
-            if(result.keys[i].keyType.equals("Tambour Unit")){
+            if(result.keys[i].keyType==("Tambour Unit")){
               console.log(result.keys);
             }
 
