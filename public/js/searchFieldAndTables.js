@@ -9,8 +9,9 @@
         url: "json/keys.json",
         success: function(result)
         {
-          console.log(result.keys[0]);
-              scope.result.keys
+          //console.log(result.keys[0]);
+              scope.keys = result.keys[0];
+              console.log(scope.keys);
             }
         })
 
