@@ -10,8 +10,15 @@
         success: function(result)
         {
           //console.log(result.keys[0]);
-              $scope.keys = result.keys[0];
-              console.log($scope.keys);
+          for(var i = 0;i<result.keys.length;i++){
+
+            if(result.keys[i].keyType.equals("Tambour Unit")){
+              console.log(result.keys);
+            }
+
+          }
+          //    $scope.keys = result.keys[0];
+              //console.log($scope.keys);
             }
         })
 
