@@ -1,19 +1,28 @@
 
     (function() {
 
-      // var app = angular.module('myApp', []);
-      // app.controller('customersCtrl', function($scope) {
+       var app = angular.module('myApp', []);
+       app.controller('customersCtrl', function($scope) {
 
     $.ajax({
         type: "GET",
         url: "json/keys.json",
         success: function(result)
         {
-          console.log(result.keys[0]);
-                //do json stuff;
+          //console.log(result.keys[0]);
+          for(var i = 0;i<result.keys.length;i++){
+
+            if(result.keys[i].keyType==("Tambour Unit")){
+              console.log(result.keys[i]);
+            }
+
+          }
+          //    $scope.keys = result.keys[0];
+              //console.log($scope.keys);
             }
         })
 
+      })
 
     })();
 

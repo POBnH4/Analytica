@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+<<<<<<< HEAD
 const url = "mongodb://localhost:27017/Analytica_Users";
 
 const ALL_KEYS = "mongodb://localhost:27017/all_keys";
@@ -8,6 +9,9 @@ const PEDESTAL_KEYS = "mongodb://localhost:27017/pedestal_keys";
 const FOB_KEYS = "mongodb://localhost:27017/fob_keys";
 const UKNOWN_KEYS = "mongodb://localhost:27017/unknown_keys";
 
+=======
+const url = "mongodb://localhost:27017/Analytica";
+>>>>>>> 894a3ca1d1bb50c5a4e152c28b83e0ac2887ff74
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');

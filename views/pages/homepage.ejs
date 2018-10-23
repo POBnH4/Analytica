@@ -76,7 +76,7 @@ function searchFormEffect(){
                     <a class="nav-link menuLink" href="contact.html">Unknown Keys</a>
                   </li>
                   <li id = "register" class="nav-item">
-                    <a class="nav-link menuLink" href="contact.html">Register</a>
+                    <a class="nav-link menuLink" href="#response"data-toggle="modal" data-target="#response">Register</a>
                   </li>
                 </ul>
               </div>
@@ -142,6 +142,30 @@ function searchFormEffect(){
   <script src="js/jquery.countdown.min.js"></script>
   <script src="js/wow.js"></script>
   <script src="js/custom.js"></script>
+
+  <div id="response" class="modal">
+
+      <form class="modal-content animate" action="/action_page.php">
+
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+        </div>
+      </form>
+    </div>
+
 
 </body>
 
