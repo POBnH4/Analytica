@@ -10,8 +10,8 @@
         success: function(result)
         {
           //console.log(result.keys[0]);
-              scope.keys = result.keys[0];
-              console.log(scope.keys);
+              $scope.keys = result.keys[0];
+              console.log($scope.keys);
             }
         })
 
