@@ -1,8 +1,8 @@
 
     (function() {
 
-      // var app = angular.module('myApp', []);
-      // app.controller('customersCtrl', function($scope) {
+       var app = angular.module('myApp', []);
+       app.controller('customersCtrl', function($scope) {
 
     $.ajax({
         type: "GET",
@@ -10,7 +10,7 @@
         success: function(result)
         {
           console.log(result.keys[0]);
-                //do json stuff;
+              scope.result.keys
             }
         })
 
