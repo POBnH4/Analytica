@@ -11,14 +11,15 @@
         {
           //console.log(result.keys[0]);
           for(var i = 0;i<result.keys.length;i++){
-              $scope.keys={};
+            var results = ""
             if(result.keys[i].keyType==("Tambour Unit")){
+              results += result.keys[i];
                   $scope.keys += result.keys[i];
 
             }
 
           }
-        console.log($scope.keys);
+        console.log(results);
             }
         })
 
