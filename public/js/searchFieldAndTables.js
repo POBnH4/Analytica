@@ -10,7 +10,7 @@
         url: "json/keys.json",
         success: function(result)
         {
-             var results
+             var results=[]
            for(var i = 0;i<result.keys.length;i++){
 
             if(result.keys[i].keyType==("Tambour Unit")){
