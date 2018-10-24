@@ -21,6 +21,7 @@
       //
       //     }
       //    $scope.result = results_array
+      console.log("hello")
 $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }];
             }
         })
