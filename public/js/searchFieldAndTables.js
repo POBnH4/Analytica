@@ -408,21 +408,23 @@
           }
          ]
 
-         var result_array = [];
-         $scope.results=[];
+         $scope.results = results
 
-         for(var i = 0;i<results.length;i++){
-
-      if(results[i].keyType==("Tambour Unit")){
-            $scope.results = results[i];
-          }
-
-        }
-
-$scope.cool= "Hello"
-$scope.cool+="Bye"
-      //   $scope.results=result_array;
-           console.log($scope.cool);
+//          var result_array = [];
+//          $scope.results=[];
+//
+//          for(var i = 0;i<results.length;i++){
+//
+//       if(results[i].keyType==("Tambour Unit")){
+//             $scope.results = results[i];
+//           }
+//
+//         }
+//
+// $scope.cool= "Hello"
+// $scope.cool+="Bye"
+//       //   $scope.results=result_array;
+//            console.log($scope.cool);
 
 
 
