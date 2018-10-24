@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="public/css/style.css">
   <link rel="stylesheet" type="text/css" href="public/css/clean-blog.min.css" >
   <link rel="stylesheet" type="text/css" href="public/css/clean-blog.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -29,6 +30,8 @@
 </head>
 
 <body>
+
+  <div ng-app="myApp" ng-controller="customersCtrl">
   <div class="content" id = "backgroundLayer">
     <div class="container wow fadeInUp delay-03s">
       <img id = "logo" src="public/img/logo.png" alt="logo" width="150">
@@ -83,40 +86,30 @@
         </div>
       </div>
 
-      <table class="table table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-          <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-          <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-           <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
 
+                  <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Key Type</th>
+                    <th scope="col">Allocated To</th>
+                    <th scope="col">Location</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="x in keys">
+                    <th scope="row">{{x.key}}</th>
+                    <td>{{x.keyType}}</td>
+                    <td>{{x.allocatedTo}}</td>
+                    <td>{{x.location}}</td>
+                  </tr>
+
+                </tbody>
+              </table>
     </div>
 
   </div>
+</div>
 
 </body>
 

@@ -1,6 +1,6 @@
 
     (function() {
-        var keys_collections=0;
+
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
@@ -11,21 +11,17 @@
         url: "json/keys.json",
         success: function(result)
         {
-              $scope.keys = result.keys[0]
-              console.log($scope.keys);
           //console.log(result.keys[0]);
-          // for(var i = 0;i<result.keys.length;i++){
-          //
-          //   if(result.keys[i].keyType==("Tambour Unit")){
-          //     // keys_collections = result.keys[i];
-          //
-          //
-          //
-          //     console.log(result.keys[i]);
-          //   }
-          //
-          // }
+          for(var i = 0;i<result.keys.length;i++){
 
+            if(result.keys[i].keyType==("Tambour Unit")){
+                  $scope.keys = result.keys[i];
+
+              console.log(result.keys[i]);
+            }
+
+          }
+        
             }
         })
 
