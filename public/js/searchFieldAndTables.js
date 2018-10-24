@@ -450,8 +450,9 @@
            for(var i = 0;i<result.keys.length;i++){
 
             if(result.keys[i].keyType==("Tambour Unit")){
-              console.log(result.keys[i])
+
               $scope.results.push(result.keys[i]);
+              console.log($scope.results)
             //  console.log()
             }
 
