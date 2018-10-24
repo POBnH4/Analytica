@@ -33,7 +33,7 @@ MongoClient.connect(url, function(err, database) {
 });
 
 app.get('/', function(req,res) {
-  res.render('pages/website') //UNCOMMENT THIS LINE TO BE REDIRECTED TO THE MAIN PAGE;
+  res.render('pages/Home') //UNCOMMENT THIS LINE TO BE REDIRECTED TO THE MAIN PAGE;
   //res.render('pages/search')
 });
 
@@ -57,15 +57,15 @@ app.post('/dologin', function(req, res) {
     if(!result){
       console.log("Error");
         //..console.log('1');
-          res.render('pages/website');return}
+          res.render('pages/Home');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
     if(result.password == pword){ req.session.loggedin = true; req.session.currentuser = uname;
         console.log("Correct");
-      res.render('pages/homepage') }
+      res.render('pages/LoggedIn') }
     //otherwise send them back to login
     else{
         console.log('3');
-        res.render('pages/website')}
+        res.render('pages/Home')}
   //res.render('pages/homepage');
   });
 
