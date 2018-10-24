@@ -105,11 +105,11 @@ function searchFormEffect(){
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">80</th>
-        <td>80</td>
-        <td>80</td>
-        <td>80</td>
+      <tr ng-repeat="x in keys">
+        <th scope="row">x.key</th>
+        <td>x.keyType</td>
+        <td>x.allocatedTo</td>
+        <td>x.location</td>
       </tr>
 
     </tbody>
