@@ -1,8 +1,8 @@
-
+         var results_array
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-         var results_array
+
 
 //  $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }];
     $.ajax({
