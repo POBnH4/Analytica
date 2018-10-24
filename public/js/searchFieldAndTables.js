@@ -419,7 +419,8 @@
 
         }
 
-
+$scope.cool = "Hello"
+$scope.cool+="Bye"
       //   $scope.results=result_array;
            console.log($scope.cool);
 
