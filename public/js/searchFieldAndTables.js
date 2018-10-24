@@ -22,6 +22,7 @@
             }
 
           }
+          $scope.result = results_array
         console.log(results_array);
             }
         })
