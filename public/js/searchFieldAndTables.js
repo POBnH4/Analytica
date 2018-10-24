@@ -437,14 +437,15 @@
         success: function(result)
         {
 
-           for(var i = 0;i<result.keys.length;i++){
-
-            if(result.keys[i].keyType==("Tambour Unit")){
-              $scope.results = result[i]
-              console.log($scope.results);
-            }
-
-          }
+            $scope.results = result
+          //  for(var i = 0;i<result.keys.length;i++){
+          //
+          //   if(result.keys[i].keyType==("Tambour Unit")){
+          //     $scope.results = result[i]
+          //     console.log($scope.results);
+          //   }
+          //
+          // }
         //  $scope.result = results
             // console.log($scope.result)
 
