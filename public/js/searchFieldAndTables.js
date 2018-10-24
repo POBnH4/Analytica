@@ -10,11 +10,11 @@
         url: "json/keys.json",
         success: function(result)
         {
-             var results_array
+             var results
            for(var i = 0;i<result.keys.length;i++){
 
             if(result.keys[i].keyType==("Tambour Unit")){
-              results_array.push(result.keys[i]);
+              results.push(result.keys[i]);
             }
 
           }
