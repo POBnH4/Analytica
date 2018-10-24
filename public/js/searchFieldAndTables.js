@@ -1,6 +1,6 @@
 
     (function() {
-
+        var keys_collections = null
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
@@ -17,11 +17,13 @@
 
             if(result.keys[i].keyType==("Tambour Unit")){
                   // $scope.keys = result.keys[0];
-                $scope.keys += result.keys[i];
+                  keys_collections += result.keys[i];
+              //
 
             }
 
           }
+          $scope.keys= keys_collections;
             console.log($scope.keys);
 
             }
