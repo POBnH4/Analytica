@@ -20,7 +20,7 @@
             }
 
           }
-      //  console.log($scope.result);
+        console.log($scope.result);
             }
         })
 
