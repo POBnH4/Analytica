@@ -16,14 +16,14 @@
           for(var i = 0;i<result.keys.length;i++){
 
             if(result.keys[i].keyType==("Tambour Unit")){
-                  // $scope.keys = result.keys[0];
-                  keys_collections += result.keys[i];
-              //
+                   $scope.keys = result.keys[i];
+
+
 
             }
 
           }
-          $scope.keys= keys_collections;
+        //  $scope.keys= keys_collections;
             console.log($scope.keys);
 
             }
