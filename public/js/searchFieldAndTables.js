@@ -450,7 +450,8 @@
            for(var i = 0;i<result.keys.length;i++){
 
             if(result.keys[i].keyType==("Tambour Unit")){
-              $scope.results.push(result[i])
+              $scope.results.push(result.keys[i])
+            //  console.log()
             }
 
           }
@@ -459,7 +460,7 @@
 
             }
 
-    
+
         })
 
 
