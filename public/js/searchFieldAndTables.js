@@ -2,7 +2,7 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-
+  $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }];
     $.ajax({
         type: "GET",
         url: "json/keys.json",
@@ -25,7 +25,7 @@
 
             }
 
-            $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }];
+
         })
 
       })
