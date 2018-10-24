@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope) {
-    (function() {
+
         var keys_collections = null
 
 
@@ -30,9 +30,9 @@ app.controller('customersCtrl', function($scope) {
             }
         })
 
-      })
+    })
 
-    })();
+
 
 
 
