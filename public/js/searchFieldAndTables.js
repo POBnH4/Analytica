@@ -452,6 +452,7 @@
 
         })
 
+        console.log($scope.results)
 
 
     })
