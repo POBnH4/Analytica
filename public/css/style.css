@@ -51,6 +51,7 @@ table {
 	margin-bottom: 5%;
 }
 #nav{
+	padding-top:50px;
 	width:80%;
 	height: 50px;
 }
@@ -72,7 +73,7 @@ a.nav-item.menuLink :hover{
 	height:90px;
 	width:90px;
 	margin-left: 45%;
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 #search{
