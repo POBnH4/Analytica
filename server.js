@@ -17,7 +17,7 @@ const app = express();
 var db;
 
 //THROWS AN ERROR, DOES NOT RECOGNISE DOCUMENT;
-//var searchField = document.getElementById('search').innerHTML;
+var searchField; //= document.getElementById('search').innerHTML;
 var store;
 
 app.use(session({ secret: 'example'}));
@@ -73,9 +73,9 @@ app.post('/dologin', function(req, res) {
 
 
 //all keys is a table with all the keys;
-// SEARCHFIELD HAS TO BE CHANGEDd;
-function findDat(){
-dbo.collection("ALL_KEYS").find({ getParamenter : '80'}, function(err, result) {
+function findData(){
+dbo.collection("ALL_KEYS").find({ getParameter : '80'}, function(err, result) {
+   // getParameter CHECKS ALL THE FIELDS, CHECK MONGO API FOR MORE INFO;
     if (err) throw err;
     store = result;
     console.log(store);
@@ -83,8 +83,9 @@ dbo.collection("ALL_KEYS").find({ getParamenter : '80'}, function(err, result) {
 });
 }// use store to update table
 
-function findData(){
-  dbo.collection("ALL_KEYS").find({ "key" : "80"}, function(err, result) {
+//check for
+function findDataByID(){
+  dbo.collection("ALL_KEYS").find({ "key" : searchField}, function(err, result) {
       if (err) throw err;
       store = result;
       console.log(store);
