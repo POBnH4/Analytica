@@ -82,7 +82,7 @@ image-crop .crop-image{display:none}image-crop .crop-wrapper{position:relative;f
 
 .jumbotron-codelines{
   color:hsla(0,0%,100%,0.6);
-  background: url("background.png"),#2b3137 !important;
+  background: url("background.png"),#959da5 !important;
   background-position:center 10%;
   background-size:cover;
 }
