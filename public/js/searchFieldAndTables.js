@@ -1,4 +1,4 @@
-         var results_array
+
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
@@ -10,7 +10,7 @@
         url: "json/keys.json",
         success: function(result)
         {
-
+             var results_array
            for(var i = 0;i<result.keys.length;i++){
 
             if(result.keys[i].keyType==("Tambour Unit")){
