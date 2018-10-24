@@ -25,7 +25,7 @@
 
         })
 
-        $scope.result = results_array
+        $scope.result = results
      console.log($scope.result)
 
       })
