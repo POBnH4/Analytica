@@ -2,31 +2,31 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-  $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }];
+         var results_array
+
+//  $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }];
     $.ajax({
         type: "GET",
         url: "json/keys.json",
         success: function(result)
         {
 
-      // //    $scope.result = result;
-      //     //console.log(result.keys[0]);
-      //     var results_array = [];
-      //     for(var i = 0;i<result.keys.length;i++){
-      //     //  var results = ""
-      //       if(result.keys[i].keyType==("Tambour Unit")){
-      //         results_array.push(result.keys[i]);
-      //
-      //       }
-      //
-      //     }
-      //    $scope.result = results_array
-      console.log("hello")
+           for(var i = 0;i<result.keys.length;i++){
+
+            if(result.keys[i].keyType==("Tambour Unit")){
+              results_array.push(result.keys[i]);
+            }
+
+          }
+
 
             }
 
 
         })
+
+        $scope.result = results_array
+     console.log($scope.result)
 
       })
 
