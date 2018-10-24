@@ -414,14 +414,14 @@
          for(var i = 0;i<results.length;i++){
 
       if(results[i].keyType==("Tambour Unit")){
-            $scope.results = results[i]
+            $scope.results = results[i];
           }
 
         }
 
 
       //   $scope.results=result_array;
-           console.log($scope.results);
+           console.log($scope.cool);
 
 
 
