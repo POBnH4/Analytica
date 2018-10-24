@@ -74,13 +74,49 @@ app.post('/dologin', function(req, res) {
 //all keys is a table with all the keys;
 // SEARCHFIELD HAS TO BE CHANGEDd;
 function findData(){
-dbo.collection("ALL_KEYS").find({key: "searchField"}, function(err, result) {
+dbo.collection("ALL_KEYS").find({ getParamenter : searchField}, function(err, result) {
     if (err) throw err;
-    //store = array with data;
-    console.log(result.name);
+    store = result;
+    console.log(store);
     db.close();
 });
 }// use store to update table
+
+function findDataById(){
+  dbo.collection("ALL_KEYS").find({ "key" : searchField}, function(err, result) {
+      if (err) throw err;
+      store = result;
+      console.log(store);
+      db.close();
+  });
+}
+
+function findDataByKeyType(){
+  dbo.collection("ALL_KEYS").find({ "keyType" : searchField}, function(err, result) {
+      if (err) throw err;
+      store = result;
+      console.log(store);
+      db.close();
+  });
+}
+
+function findDataByAllocatedTo(){
+  dbo.collection("ALL_KEYS").find({ "allocatedTo" : searchField}, function(err, result) {
+      if (err) throw err;
+      store = result;
+      console.log(store);
+      db.close();
+  });
+}
+
+function findDataByLocation(){
+  dbo.collection("ALL_KEYS").find({ "location" : searchField}, function(err, result) {
+      if (err) throw err;
+      store = result;
+      console.log(store);
+      db.close();
+  });
+}
 
 
 
