@@ -408,17 +408,17 @@
           }
          ]
 
-     //     var result_array = [];
-     //
-     //     for(var i = 0;i<results.length;i++){
-     //
-      // if(results[i].keyType==("Tambour Unit")){
-      //       result_array += results[i]
-      //     }
-      //
-      //   }
+         var result_array = [];
 
-         $scope.results=results;
+         for(var i = 0;i<results.length;i++){
+
+      if(results[i].keyType==("Tambour Unit")){
+            result_array += results[i]
+          }
+
+        }
+
+         $scope.results=results_array;
             // console.log($scope.results);
 
 
