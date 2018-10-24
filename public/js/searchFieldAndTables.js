@@ -4,6 +4,8 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
+         //AJAX request is used here to call on the local JSON file.
+
     $.ajax({
         type: "GET",
         url: "json/keys.json",
@@ -19,8 +21,7 @@
             }
 
           }
-          //    $scope.keys = result.keys[0];
-              //console.log($scope.keys);
+        
             }
         })
 
