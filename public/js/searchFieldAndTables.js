@@ -11,10 +11,10 @@
         url: "json/keys.json",
         success: function(result)
         {
-          $scope.keys = result.keys;
+
           //console.log(result.keys[0]);
           for(var i = 0;i<result.keys.length;i++){
-
+                $scope.keys = result.keys[i];
             if(result.keys[i].keyType==("Tambour Unit")){
                 //  $scope.keys = result.keys[0];
 
