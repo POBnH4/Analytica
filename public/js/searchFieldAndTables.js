@@ -417,8 +417,9 @@
           }
 
         }
+        
 
-         $scope.results=results_array;
+         $scope.results=result_array;
             // console.log($scope.results);
 
 
