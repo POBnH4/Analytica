@@ -18,6 +18,7 @@
             }
 
           }
+          $scope.result = results
 
 
             }
@@ -25,7 +26,7 @@
 
         })
 
-        $scope.result = results
+
      console.log($scope.result)
 
       })
