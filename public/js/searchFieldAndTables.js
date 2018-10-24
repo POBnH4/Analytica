@@ -4,7 +4,7 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-         $scope.results;
+         $scope.results="hello"
             console.log($scope.results);
          var results ;
 
