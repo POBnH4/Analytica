@@ -16,7 +16,7 @@ const app = express();
 
 var db;
 
-var searchField = document.getElementById("#search").innerHTML;
+var searchField = document.getElementById("search").innerHTML;
 var store;
 
 app.use(session({ secret: 'example'}));
