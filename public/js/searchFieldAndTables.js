@@ -6,6 +6,7 @@
 
             $scope.results=[]
 
+
          var results = [];
 
       results = [{
@@ -413,11 +414,11 @@
          ]
 
 
-            for(var i = 0 ; i<results.length;i++){
-              if(results[i].keyType==="Tambour Unit"){
-                $scope.results.push(results[i])
-              }
-            }
+            // for(var i = 0 ; i<results.length;i++){
+            //   if(results[i].keyType==="Tambour Unit"){
+            //     $scope.results.push(results[i])
+            //   }
+            // }
         //  $scope.results = results
 
 //          var result_array = [];
@@ -438,29 +439,28 @@
 
 
 
-    // $.ajax({
-    //     type: "GET",
-    //     url: "json/keys.json",
-    //     success: function(result)
-    //     {
-    //
-    //         $scope.results = result
-    //         console.log($scope.results)
-    //       //  for(var i = 0;i<result.keys.length;i++){
-    //       //
-    //       //   if(result.keys[i].keyType==("Tambour Unit")){
-    //       //     $scope.results = result[i]
-    //       //     console.log($scope.results);
-    //       //   }
-    //       //
-    //       // }
-    //     //  $scope.result = results
-    //         // console.log($scope.result)
-    //
-    //         }
-    //
-    //
-    //     })
+    $.ajax({
+        type: "GET",
+        url: "json/keys.json",
+        success: function(result)
+        {
+
+
+
+           for(var i = 0;i<result.keys.length;i++){
+
+            if(result.keys[i].keyType==("Tambour Unit")){
+              $scope.results.push(result[i])
+            }
+
+          }
+        //  $scope.result = results
+            // console.log($scope.result)
+
+            }
+
+    
+        })
 
 
 
