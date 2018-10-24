@@ -1,30 +1,28 @@
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope) {
 
 
 
-         //AJAX request is used here to call on the local JSON file.
+       var app = angular.module('myApp', []);
+       app.controller('customersCtrl', function($scope) {
 
-
-
+    $.ajax({
+        type: "GET",
+        url: "json/keys.json",
+        success: function(result)
+        {
           //console.log(result.keys[0]);
-          // for(var i = 0;i<result.keys.length;i++){
-          //
-          //   if(result.keys[i].keyType==("Tambour Unit")){
-          //     console.log(result.keys[i])
-          //          $scope.keys = result.keys[i];
-          //
-          //   }
-          //
-          // }
+          for(var i = 0;i<result.keys.length;i++){
 
-           $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }, { id: 2, product: 'Wheat', quality: 'Super', quantity: '100 bags' }, { id: 3, product: 'Rice', quality: 'Fine', quantity: '50 packs' }];
+            if(result.keys[i].keyType==("Tambour Unit")){
+                  $scope.keys = result.keys[i];
 
+            }
 
-
-
+          }
+        console.log($scope.keys);
+            }
         })
 
+      })
 
 
 
