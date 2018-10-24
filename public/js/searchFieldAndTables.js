@@ -408,9 +408,10 @@
           }
          ]
 
-         console.log(results);
 
 
+         $scope.results=results;
+            console.log($scope.results);
 
 
 
@@ -444,8 +445,8 @@
             }
 
           }
-          $scope.result = results
-             console.log($scope.result)
+        //  $scope.result = results
+            // console.log($scope.result)
 
             }
 
