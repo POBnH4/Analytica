@@ -417,7 +417,7 @@
           }
 
         }
-        
+
 
          $scope.results=result_array;
             // console.log($scope.results);
