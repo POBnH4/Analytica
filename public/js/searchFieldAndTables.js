@@ -4,6 +4,7 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
+            $scope.results=[]
 
          var results = [];
 
@@ -414,7 +415,7 @@
 
             for(var i = 0 ; i<results.length;i++){
               if(results[i].keyType==="Tambour Unit"){
-                console.log(results[i])
+                $scope.results.push(results[i])
               }
             }
         //  $scope.results = results
