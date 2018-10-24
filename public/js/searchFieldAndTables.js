@@ -11,7 +11,7 @@
         url: "json/keys.json",
         success: function(result)
         {
-              $scope.keys = result
+              $scope.keys = result.keys
               console.log(result);
           //console.log(result.keys[0]);
           // for(var i = 0;i<result.keys.length;i++){
