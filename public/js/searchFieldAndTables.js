@@ -27,7 +27,7 @@ $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 pa
         })
 
       })
-})
+
 
 
 
