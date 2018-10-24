@@ -1,8 +1,8 @@
-
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope) {
     (function() {
         var keys_collections = null
-       var app = angular.module('myApp', []);
-       app.controller('customersCtrl', function($scope) {
+
 
          //AJAX request is used here to call on the local JSON file.
 
@@ -25,7 +25,7 @@
 
            $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }, { id: 2, product: 'Wheat', quality: 'Super', quantity: '100 bags' }, { id: 3, product: 'Rice', quality: 'Fine', quantity: '50 packs' }];
 
-        
+
 
             }
         })
