@@ -4,9 +4,8 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-         $scope.results="hello";
-            console.log($scope.results);
-         var results ;
+
+         var results = [];
 
       // results = [{
       //       "key": "80",
@@ -431,30 +430,30 @@
 //            console.log($scope.cool);
 
 
-    //
-    // $.ajax({
-    //     type: "GET",
-    //     url: "json/keys.json",
-    //     success: function(result)
-    //     {
-    //          // var results=[]
-    //        for(var i = 0;i<result.keys.length;i++){
-    //
-    //         if(result.keys[i].keyType==("Tambour Unit")){
-    //         //  results.push(result.keys[i]);
-    //         }
-    //
-    //       }
-    //     //  $scope.result = results
-    //         // console.log($scope.result)
-    //
-    //         }
-    //
-    //
-    //     })
+
+    $.ajax({
+        type: "GET",
+        url: "json/keys.json",
+        success: function(result)
+        {
+
+           for(var i = 0;i<result.keys.length;i++){
+
+            if(result.keys[i].keyType==("Tambour Unit")){
+              $scope.results = result[i]
+            }
+
+          }
+        //  $scope.result = results
+            // console.log($scope.result)
+
+            }
 
 
-      
+        })
+
+
+
     })
 
 
