@@ -2,7 +2,10 @@
 
 
        var app = angular.module('myApp', []);
-       app.controller('customersCtrl', function($scope) {
+       app.controller('customersCtrl', function($scope,$http) {
+          $http.get('keys.json').then(function(response){
+            console.log(response.data)
+          })
 
             $scope.results=[]
 
@@ -439,42 +442,42 @@
 
 
 
-    $.ajax({
-        type: "GET",
-        url: "json/keys.json",
-        success: function(result)
-        {
+    // $.ajax({
+    //     type: "GET",
+    //     url: "json/keys.json",
+    //     success: function(result)
+    //     {
+    //
+    //       resultsCall(result);
+    //
+    //
+    //
+    //     //  $scope.result = results
+    //         // console.log($scope.result)
+    //
+    //         }
+    //
+    //
+    //     })
 
-          resultsCall(result);
 
-
-
-        //  $scope.result = results
-            // console.log($scope.result)
-
-            }
-
-
-        })
-
-
-
-function resultsCall(result){
-
-  for(var i = 0;i<result.keys.length;i++){
-
-   if(result.keys[i].keyType==("Tambour Unit")){
-
-     $scope.results.push(result.keys[i]);
-
-   //  console.log()
-   }
-
- }
-
- console.log($scope.results)
-
-}
+//
+// function resultsCall(result){
+//
+//   for(var i = 0;i<result.keys.length;i++){
+//
+//    if(result.keys[i].keyType==("Tambour Unit")){
+//
+//      $scope.results.push(result.keys[i]);
+//
+//    //  console.log()
+//    }
+//
+//  }
+//
+//  console.log($scope.results)
+//
+// }
 
 
     })
