@@ -9,17 +9,19 @@
         url: "json/keys.json",
         success: function(result)
         {
+
+          $scope.result = result;
           //console.log(result.keys[0]);
-          for(var i = 0;i<result.keys.length;i++){
-            var results = ""
-            if(result.keys[i].keyType==("Tambour Unit")){
-              results += result.keys[i];
-                  $scope.keys += result.keys[i];
-
-            }
-
-          }
-        console.log(results);
+          // for(var i = 0;i<result.keys.length;i++){
+          //   var results = ""
+          //   if(result.keys[i].keyType==("Tambour Unit")){
+          //     results += result.keys[i];
+          //         $scope.keys += result.keys[i];
+          //
+          //   }
+          //
+          // }
+        console.log($scope.results);
             }
         })
 
