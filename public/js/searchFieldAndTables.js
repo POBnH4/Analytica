@@ -1,6 +1,4 @@
 
-
-
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
@@ -17,12 +15,12 @@
           //  var results = ""
             if(result.keys[i].keyType==("Tambour Unit")){
               results_array.push(result.keys[i]);
-              //$scope.result = result.keys[i]
 
             }
 
           }
           $scope.result = results_array
+          $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }, { id: 2, product: 'Wheat', quality: 'Super', quantity: '100 bags' }, { id: 3, product: 'Rice', quality: 'Fine', quantity: '50 packs' }];
         console.log(results_array);
             }
         })
