@@ -408,50 +408,41 @@
           }
          ]
 
+         var result_array = [];
 
+         for(var i = 0;i<results.length;i++){
 
-         $scope.results=results;
+     if(results[i].keyType==("Tambour Unit")){
+           result_array = results[i]
+         }
+
+       }
+
+         $scope.results=results_array;
             console.log($scope.results);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $.ajax({
-        type: "GET",
-        url: "json/keys.json",
-        success: function(result)
-        {
-             var results=[]
-           for(var i = 0;i<result.keys.length;i++){
-
-            if(result.keys[i].keyType==("Tambour Unit")){
-              results.push(result.keys[i]);
-            }
-
-          }
-        //  $scope.result = results
-            // console.log($scope.result)
-
-            }
-
-
-        })
+    // $.ajax({
+    //     type: "GET",
+    //     url: "json/keys.json",
+    //     success: function(result)
+    //     {
+    //          var results=[]
+    //        for(var i = 0;i<result.keys.length;i++){
+    //
+    //         if(result.keys[i].keyType==("Tambour Unit")){
+    //           results.push(result.keys[i]);
+    //         }
+    //
+    //       }
+    //     //  $scope.result = results
+    //         // console.log($scope.result)
+    //
+    //         }
+    //
+    //
+    //     })
 
 
       })
