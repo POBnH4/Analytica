@@ -1,16 +1,11 @@
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope) {
 
-        var keys_collections = null
 
 
          //AJAX request is used here to call on the local JSON file.
 
-    $.ajax({
-        type: "GET",
-        url: "json/keys.json",
-        success: function(result)
-        {
+
 
           //console.log(result.keys[0]);
           // for(var i = 0;i<result.keys.length;i++){
@@ -27,10 +22,9 @@ app.controller('customersCtrl', function($scope) {
 
 
 
-            }
+
         })
 
-    })
 
 
 
