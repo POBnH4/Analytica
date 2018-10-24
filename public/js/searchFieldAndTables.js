@@ -17,7 +17,7 @@
 
             if(result.keys[i].keyType==("Tambour Unit")){
                   // $scope.keys = result.keys[0];
-                $scope.keys = result.keys[i];
+                $scope.keys += result.keys[i];
 
             }
 
