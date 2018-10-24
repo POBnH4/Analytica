@@ -17,11 +17,12 @@
             if(result.keys[i].keyType==("Tambour Unit")){
                   $scope.keys = result.keys[i];
 
-              console.log(result.keys[i]);
+
             }
 
           }
-        
+            console.log($scope.keys);
+
             }
         })
 
