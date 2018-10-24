@@ -441,6 +441,7 @@
 
             if(result.keys[i].keyType==("Tambour Unit")){
               $scope.results = result[i]
+              console.log($scope.results);
             }
 
           }
@@ -452,7 +453,7 @@
 
         })
 
-        console.log($scope.results)
+
 
 
     })
