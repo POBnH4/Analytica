@@ -419,7 +419,7 @@
         }
 
 
-         $scope.results=result_array;
+         $scope.results=results;
             // console.log($scope.results);
 
 
