@@ -16,7 +16,8 @@ const app = express();
 
 var db;
 
-var searchField = document.getElementById("search").innerHTML;
+//THROWS AN ERROR, DOES NOT RECOGNISE DOCUMENT;
+//var searchField = document.getElementById('search').innerHTML;
 var store;
 
 app.use(session({ secret: 'example'}));
@@ -74,7 +75,7 @@ app.post('/dologin', function(req, res) {
 //all keys is a table with all the keys;
 // SEARCHFIELD HAS TO BE CHANGEDd;
 function findData(){
-dbo.collection("ALL_KEYS").find({ getParamenter : searchField}, function(err, result) {
+dbo.collection("ALL_KEYS").find({ getParamenter : '80'}, function(err, result) {
     if (err) throw err;
     store = result;
     console.log(store);
