@@ -445,18 +445,10 @@
         success: function(result)
         {
 
+          resultsCall(result);
 
 
-           for(var i = 0;i<result.keys.length;i++){
 
-            if(result.keys[i].keyType==("Tambour Unit")){
-
-              $scope.results.push(result.keys[i]);
-
-            //  console.log()
-            }
-
-          }
         //  $scope.result = results
             // console.log($scope.result)
 
@@ -465,7 +457,24 @@
 
         })
 
-console.log($scope.results)
+
+
+function resultsCall(result){
+
+  for(var i = 0;i<result.keys.length;i++){
+
+   if(result.keys[i].keyType==("Tambour Unit")){
+
+     $scope.results.push(result.keys[i]);
+
+   //  console.log()
+   }
+
+ }
+
+ console.log($scope.results)
+
+}
 
 
     })
