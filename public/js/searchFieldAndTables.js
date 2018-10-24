@@ -13,6 +13,8 @@
           for(var i = 0;i<result.keys.length;i++){
 
             if(result.keys[i].keyType==("Tambour Unit")){
+                  $scope.keys = result.keys[i];
+
               console.log(result.keys[i]);
             }
 
