@@ -106,11 +106,11 @@ function searchFormEffect(){
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in keys">
-        <th scope="row">{{x.key}}</th>
-        <td>{{x.keyType}}</td>
-        <td>{{x.allocatedTo}}</td>
-        <td>{{x.location}}</td>
+      <tr ng-repeat="x in products">
+        <th scope="row">{{x.id}}</th>
+        <td>{{x.product}}</td>
+        <td>{{x.quality}}</td>
+        <td>{{x.quantity}}</td>
       </tr>
 
     </tbody>
