@@ -420,7 +420,7 @@
 
 
          $scope.results=result_array;
-            // console.log($scope.results);
+           console.log($scope.results);
 
 
 
