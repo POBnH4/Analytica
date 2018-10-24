@@ -21,7 +21,7 @@
           //   }
           //
           // }
-        console.log($scope.results);
+        console.log($scope.result);
             }
         })
 
