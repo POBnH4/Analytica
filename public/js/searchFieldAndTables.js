@@ -4,7 +4,7 @@
 
 
 
-//  $scope.products = [{ id: 1, product: 'Sugar', quality: 'Good', quantity: '200 packs' }];
+
     $.ajax({
         type: "GET",
         url: "json/keys.json",
@@ -19,7 +19,7 @@
 
           }
           $scope.result = results
-
+             console.log($scope.result)
 
             }
 
@@ -27,7 +27,7 @@
         })
 
 
-     console.log($scope.result)
+
 
       })
 
