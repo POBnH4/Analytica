@@ -6,7 +6,8 @@
 
             $scope.results=[]
             $scope.searchText = ""
-            
+            var results = []
+
 
          var results = [];
 
