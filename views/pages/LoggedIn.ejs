@@ -91,7 +91,7 @@ function searchFormEffect(){
 
         <div class="subcription-info text-center">
           <form class="subscribe_form" action="#" method="post" id="searchForm">
-            <input required="" value="" placeholder="Search...." class="email" id="search" onkeydown="searchFormEffect()" name="search" type="name">
+            <input required="" ng-model="searchText" value="" placeholder="Search...." class="email" id="search" onkeydown="searchFormEffect()" name="search" type="name">
             <input class="subscribe" name="email" value="Search!" type="submit" id= "searchSubmit">
           </form>
         </div>
@@ -108,7 +108,7 @@ function searchFormEffect(){
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in results">
+      <tr ng-repeat="x in results|filter search:searchText">
 
          <td>{{x.key}}</td>
 
