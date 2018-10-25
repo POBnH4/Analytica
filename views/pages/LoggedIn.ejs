@@ -90,8 +90,9 @@ function searchFormEffect(){
         </div>
 
         <div class="subcription-info text-center">
+          <input required="" ng-model="searchText" ng-change="console.log($scope.searchText)" value="" placeholder="Search...." class="email" id="search" onkeydown="searchFormEffect()" name="search" type="name">
           <form class="subscribe_form" action="#" method="post" id="searchForm">
-            <input required="" ng-model="searchText" ng-change="console.log($scope.searchText)" value="" placeholder="Search...." class="email" id="search" onkeydown="searchFormEffect()" name="search" type="name">
+
             <input class="subscribe" name="email" value="Search!" type="submit" id= "searchSubmit">
           </form>
         </div>
