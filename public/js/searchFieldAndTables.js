@@ -4,9 +4,12 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
+
+
             $scope.results=[]
             $scope.searchText = ""
           //  var results = []
+
 
 
          var results = [];
@@ -415,12 +418,18 @@
           }
          ]
 
+         function TambourUnit(){
 
-            for(var i = 0 ; i<results.length;i++){
-              if(results[i].keyType==="Tambour Unit"){
-                $scope.results.push(results[i])
-              }
-            }
+           for(var i = 0 ; i<results.length;i++){
+             if(results[i].keyType==="Tambour Unit"){
+               $scope.results.push(results[i])
+             }
+           }
+
+         }
+
+
+
 
 
 
