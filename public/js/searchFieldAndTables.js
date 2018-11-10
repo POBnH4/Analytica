@@ -3,9 +3,10 @@
        app.controller('customersCtrl', function($scope) {
 
 
-          //  var results = []
+      
 
 
+ $(document).ready(function(){
 
 
          var results = [];
@@ -429,7 +430,7 @@
 
 
 
-
+})
 
 
   })
