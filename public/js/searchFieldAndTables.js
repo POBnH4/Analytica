@@ -418,7 +418,6 @@
           }
          ]
 
-         $( "#target" ).click(function() {
 
            $scope.results=[]
 
@@ -431,7 +430,7 @@
                 console.log("hello");
               }
            }
-})
+
 
 
 
