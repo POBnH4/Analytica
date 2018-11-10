@@ -88,14 +88,14 @@ app.post('/registerDetails', function (req,res){
             if(occurences == USER_DOES_NOT_EXIST){
 
                 var info = {
-                  "name":req.body.name,
+                  "name":req.body.username,
                   "password": req.body.password,
                   "rights": req.body.rigts
                 };
                 db.collection('users').save(info, function(err, result) {
                   if (err) throw err;
                   console.log('Saved to database');
-                  console.log("name " + req.body.name + "\npassword " + req.body.password  + "\nrights " + req.body.rights);
+                  console.log("name " + req.body.username + "\npassword " + req.body.password  + "\nrights " + req.body.rights);
                   res.redirect('/');
                 })
 
