@@ -7,7 +7,7 @@ const DOOR_KEYS = "mongodb://localhost:27017/door_keys";
 const PEDESTAL_KEYS = "mongodb://localhost:27017/pedestal_keys";
 const FOB_KEYS = "mongodb://localhost:27017/fob_keys";
 const UKNOWN_KEYS = "mongodb://localhost:27017/unknown_keys";
-
+const USER_DOES_NOT_EXIST = 0;
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
