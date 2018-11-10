@@ -96,12 +96,12 @@ app.post('/registerDetails', function (req,res){
                   if (err) throw err;
                   console.log('Saved to database');
                   console.log("name " + req.body.username + "\npassword " + req.body.password  + "\nrights " + req.body.rights);
+                  res.redirect('pages/LoggedIn');
                 })
-                res.render('pages/LoggedIn');
 
 
            }else{
-             console.log("User already exists with that email!");
+             console.log("User already exists with that username!");
              res.redirect('/');
            }
          });
