@@ -1,13 +1,8 @@
 
-
-
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-
-
-
-            $scope.searchText = ""
+            $scope.searchText = "";
           //  var results = []
 
 
@@ -417,7 +412,6 @@
             "location": ""
           }
          ]
-
 
            $scope.results=[]
 
