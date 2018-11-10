@@ -83,43 +83,6 @@ dbo.collection("ALL_KEYS").find({ getParameter : '80'}, function(err, result) {
 });
 }// use store to update table
 
-//check for
-function findDataByID(){
-  dbo.collection("ALL_KEYS").find({ "key" : searchField}, function(err, result) {
-      if (err) throw err;
-      store = result;
-      console.log(store);
-      db.close();
-  });
-}
-
-function findDataByKeyType(){
-  dbo.collection("ALL_KEYS").find({ "keyType" : searchField}, function(err, result) {
-      if (err) throw err;
-      store = result;
-      console.log(store);
-      db.close();
-  });
-}
-
-function findDataByAllocatedTo(){
-  dbo.collection("ALL_KEYS").find({ "allocatedTo" : searchField}, function(err, result) {
-      if (err) throw err;
-      store = result;
-      console.log(store);
-      db.close();
-  });
-}
-
-function findDataByLocation(){
-  dbo.collection("ALL_KEYS").find({ "location" : searchField}, function(err, result) {
-      if (err) throw err;
-      store = result;
-      console.log(store);
-      db.close();
-  });
-}
-
 
 
 
