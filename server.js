@@ -83,7 +83,7 @@ dbo.collection("ALL_KEYS").find({ getParameter : '80'}, function(err, result) {
 });
 }// use store to update table
 
-app.get('/registerDetails', function (req,res){
+app.post('/registerDetails', function (req,res){
         db.collection('Analytica').count({"username":req.body.username, "password": req.body.password}).then((occurences) => {
             if(occurences == USER_DOES_NOT_EXIST){
 
