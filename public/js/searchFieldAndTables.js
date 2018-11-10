@@ -5,9 +5,8 @@
 
           //  var results = []
 
-            $(document).ready(function(){
 
-            
+
 
          var results = [];
 
@@ -427,7 +426,7 @@
               }
            }
 
-})
+
 
 
 
