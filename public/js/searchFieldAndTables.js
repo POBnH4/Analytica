@@ -1,5 +1,6 @@
- $(document).ready(function(){
+
        var app = angular.module('myApp', []);
+        $(document).ready(function(){
        app.controller('customersCtrl', function($scope) {
 
 
