@@ -425,7 +425,7 @@
               if(results[i].keyType==="Tambour Unit"){
 
                 $scope.results.push(results[i])
-                console.log($scope.result[i])
+              //  console.log($scope.result[i])
 
                 console.log("hello");
               }
