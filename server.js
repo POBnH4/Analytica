@@ -85,7 +85,25 @@ dbo.collection("ALL_KEYS").find({ getParameter : '80'}, function(err, result) {
 
 
 
+app.post('/registerDetails', function (req,res){
+        db.collection('users').count({"username":req.body.username, "password": req.body.password}).then((occurences) => {
 
+                var info = {
+                  "name":req.body.name,
+                  "password": req.body.password,
+                };
+                db.collection('Analytica').save(info, function(err, result) {
+                  if (err) throw err;
+                  console.log('Saved to database');
+                  res.redirect('/');
+                })
+
+           }else{
+             console.log("User already exists with that email!");
+             res.redirect('/');
+           }
+         });
+       });
 // var collection = db.collection('Clients');  // get reference to the collection
 // collection.find({Name: msg.Name}, {$exists: true}).toArray(function(err, doc) //find if a value exists
 // {
