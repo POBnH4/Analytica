@@ -7,7 +7,6 @@ const DOOR_KEYS = "mongodb://localhost:27017/door_keys";
 const PEDESTAL_KEYS = "mongodb://localhost:27017/pedestal_keys";
 const FOB_KEYS = "mongodb://localhost:27017/fob_keys";
 const UKNOWN_KEYS = "mongodb://localhost:27017/unknown_keys";
-const USER_DOES_NOT_EXIST = 0, USER_EXISTS = 1;
 
 const express = require('express');
 const session = require('express-session');
@@ -120,32 +119,6 @@ function findDataByLocation(){
       db.close();
   });
 }
-
-
-
-
-
-
-
-       app.post('/registerDetails', function (req,res){
-         db.collection('users').count({"username":req.body.username, "password": req.body.password}).then((occurences) => {
-             if(occurences == USER_DOES_NOT_EXIST){
-                 var info = {
-                   "name":req.body.name,
-                   "password": req.body.password,
-                   "rights": req.body.rights
-                 };
-                 db.collection('Analytica').save(info, function(err, result) {
-                   if (err) throw err;
-                   console.log('Saved to database');
-                   res.redirect('/');
-                 })
-            }else{
-              console.log("User already exists with that username!");
-              res.redirect('/');
-            }
-          });
-        });
 
 
 
