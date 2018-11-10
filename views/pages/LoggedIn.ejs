@@ -42,8 +42,13 @@
                   <li class="nav-item">
                     <a class="nav-link menuLink" href="index.html">Home</a>
                   </li>
+<<<<<<< HEAD
                   <li class="nav-item" onclick='TambourUnit()'>
                     <a class="nav-link menuLink">Tambour Unit</a>
+=======
+                  <li class="nav-item">
+                    <a class="nav-link menuLink" onclick="TambourUnit()">Tambour Unit</a>
+>>>>>>> 34f53a7596179fd229ab51214b62f251e62cf0d9
                   </li>
                   <li class="nav-item ">
                     <a class="nav-link menuLink"href="about.html">Door keys</a>
@@ -61,7 +66,7 @@
                     <a class="nav-link menuLink" href="contact.html">Unknown Keys</a>
                   </li>
                   <li id = "register" class="nav-item">
-                    <a class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</a>
+                    <button class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</button>
                   </li>
                 </ul>
               </div>
@@ -142,7 +147,7 @@
 
     <div id="registerButtonID" class="modal">
 
-  <form class="modal-content animate" action="/registerDetails">
+  <form class="modal-content animate" metohd = "POST" action="/registerDetails">
     <div class="container">
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="username" required>
