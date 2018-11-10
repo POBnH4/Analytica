@@ -6,7 +6,7 @@
 
 
 
-            $scope.results=[]
+
             $scope.searchText = ""
           //  var results = []
 
@@ -419,6 +419,8 @@
          ]
 
          $( "#target" ).click(function() {
+
+           $scope.results=[]
 
             for(var i = 0 ; i<results.length;i++){
               if(results[i].keyType==="Tambour Unit"){
