@@ -62,12 +62,13 @@ app.post('/dologin', function(req, res) {
     if(result.password == pword){
         req.session.loggedin = true; req.session.currentuser = uname;
         console.log("Correct");
-        if(result.rights == "admin"){
-          res.render('pages/LoggedIn')
+        if(result.rights == "Level 2"){
+          res.render('pages/LoggedInLevelTwo')
         }else if(result.rights == "Level 1"){
           res.render('pages/LoggedInLevelOne')
         }else {
-          res.render('pages/LoggedInLevelTwo')
+          res.render('pages/LoggedIn')
+
         }
       }else{     //otherwise send them back to login
 
