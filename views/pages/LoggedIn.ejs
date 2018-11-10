@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,25 +24,6 @@
   <script type="text/javascript" src="js/searchFieldAndTables.js"></script>
 
 </head>
-
-<script>
-function searchFormEffect(){
-  var value = document.getElementById('search').value.length + 1;
-  if (value.length > 0) {
-    $('searchForm').css({
-      position:  'relative',
-      top: '-105px'
-    });
- }else{
-   $('searchForm').css({
-     position: 'relative',
-     top: '+105px'
-   });
- }
-
-}
-</script>
-
 
 <body>
   <div id = "logo" class="logo text-center">
@@ -81,7 +60,7 @@ function searchFormEffect(){
                     <a class="nav-link menuLink" href="contact.html">Unknown Keys</a>
                   </li>
                   <li id = "register" class="nav-item">
-                    <a class="nav-link menuLink" href="#response"data-toggle="modal" data-target="#response">Register</a>
+                    <a class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</a>
                   </li>
                 </ul>
               </div>
@@ -126,13 +105,6 @@ function searchFormEffect(){
 
 
     </div>
-
-
-
-
-
-
-
   </div>
 
 
@@ -165,6 +137,32 @@ function searchFormEffect(){
         </div>
       </form>
     </div>
+
+    <div id="registerButtonID" class="modal">
+
+  <form class="modal-content animate" action="/registerDetails">
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <select name = "rights">
+          <option value="Level 1">Level 1</option>
+          <option value="Level 2">Level 2</option>
+          <option value="Admin">Admin</option>
+      </select>
+      <button type="submit">Add User</button>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
 
 
 
