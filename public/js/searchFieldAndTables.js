@@ -6,7 +6,7 @@
 
             $scope.results=[]
             $scope.searchText = ""
-            var results = []
+          //  var results = []
 
 
          var results = [];
@@ -421,54 +421,37 @@
                 $scope.results.push(results[i])
               }
             }
-        //  $scope.results = results
-
-//          var result_array = [];
-//          $scope.results=[];
-//
-//          for(var i = 0;i<results.length;i++){
-//
-//       if(results[i].keyType==("Tambour Unit")){
-//             $scope.results = results[i];
-//           }
-//
-//         }
-//
-// $scope.cool= "Hello"
-// $scope.cool+="Bye"
-//       //   $scope.results=result_array;
-//            console.log($scope.cool);
 
 
 
-    $.ajax({
-        type: "GET",
-        url: "json/keys.json",
-        success: function(result)
-        {
-
-            $scope.results = result
-            console.log($scope.results)
-           for(var i = 0;i<result.keys.length;i++){
-
-            if(result.keys[i].keyType==("Tambour Unit")){
-              $scope.results = result[i]
-              console.log($scope.results);
-            }
-
-          }
-         $scope.result = results
-            console.log($scope.result)
-
-            }
-
-
-        })
+    // $.ajax({
+    //     type: "GET",
+    //     url: "json/keys.json",
+    //     success: function(result)
+    //     {
+    //
+    //         $scope.results = result
+    //         console.log($scope.results)
+    //        for(var i = 0;i<result.keys.length;i++){
+    //
+    //         if(result.keys[i].keyType==("Tambour Unit")){
+    //           $scope.results = result[i]
+    //           console.log($scope.results);
+    //         }
+    //
+    //       }
+    //      $scope.result = results
+    //         console.log($scope.result)
+    //
+    //         }
+    //
+    //
+    //     })
 
 
 
 
-    })
+    }
 
 
 
