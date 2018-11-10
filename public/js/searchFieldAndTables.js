@@ -418,6 +418,10 @@
           }
          ]
 
+         $( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
          function TambourUnit(){
            //
            // for(var i = 0 ; i<results.length;i++){
