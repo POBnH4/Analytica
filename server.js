@@ -87,6 +87,7 @@ dbo.collection("ALL_KEYS").find({ getParameter : '80'}, function(err, result) {
 
 app.post('/registerDetails', function (req,res){
         db.collection('users').count({"username":req.body.username, "password": req.body.password}).then((occurences) => {
+            if(occurences == USER_DOES_NOT_EXIST){
 
                 var info = {
                   "name":req.body.name,
