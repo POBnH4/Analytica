@@ -1,13 +1,8 @@
 
-
-
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-
-
-
-            $scope.searchText = ""
+            $scope.searchText = "";
           //  var results = []
 
 
@@ -418,20 +413,18 @@
           }
          ]
 
-         $( "#target" ).click(function() {
-
            $scope.results=[]
 
             for(var i = 0 ; i<results.length;i++){
               if(results[i].keyType==="Tambour Unit"){
 
                 $scope.results.push(results[i])
-                console.log($scope.result[i])
+              //  console.log($scope.result[i])
 
                 console.log("hello");
               }
            }
-})
+
 
 
 
