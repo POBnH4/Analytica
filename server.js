@@ -7,7 +7,7 @@ const DOOR_KEYS = "mongodb://localhost:27017/door_keys";
 const PEDESTAL_KEYS = "mongodb://localhost:27017/pedestal_keys";
 const FOB_KEYS = "mongodb://localhost:27017/fob_keys";
 const UKNOWN_KEYS = "mongodb://localhost:27017/unknown_keys";
-
+const USER_DOES_NOT_EXIST = 0;
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -84,14 +84,14 @@ dbo.collection("ALL_KEYS").find({ getParameter : '80'}, function(err, result) {
 }// use store to update table
 
 app.post('/registerDetails', function (req,res){
-        db.collection('Analytica').count({"username":req.body.username, "password": req.body.password}).then((occurences) => {
+        db.collection('users').count({"username":req.body.username, "password": req.body.password}).then((occurences) => {
             if(occurences == USER_DOES_NOT_EXIST){
 
                 var info = {
                   "name":req.body.name,
                   "password": req.body.password,
                 };
-                db.collection('Analytica').save(info, function(err, result) {
+                db.collection('users').save(info, function(err, result) {
                   if (err) throw err;
                   console.log('Saved to database');
                   res.redirect('/');
@@ -103,6 +103,7 @@ app.post('/registerDetails', function (req,res){
            }
          });
        });
+
 // var collection = db.collection('Clients');  // get reference to the collection
 // collection.find({Name: msg.Name}, {$exists: true}).toArray(function(err, doc) //find if a value exists
 // {
