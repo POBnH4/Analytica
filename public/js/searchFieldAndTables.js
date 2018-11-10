@@ -427,7 +427,7 @@
 
                 $scope.results.push(results[i])
 
-                //console.log("hello");
+                console.log("hello");
               }
            }
 })
