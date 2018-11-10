@@ -61,7 +61,13 @@ app.post('/dologin', function(req, res) {
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
     if(result.password == pword){ req.session.loggedin = true; req.session.currentuser = uname;
         console.log("Correct");
-      res.render('pages/LoggedIn') }
+        if(result.rights == "admin"){
+          res.render('pages/LoggedIn') }
+        }else if(result.rights == "Level 1"){
+          res.render('pages/LoggedInLevelOne')
+        }else{
+          res.render('pages/LoggedInLevelTwo')
+        }
     //otherwise send them back to login
     else{
         console.log('3');
@@ -96,7 +102,7 @@ app.post('/registerDetails', function (req,res){
                   if (err) throw err;
                   console.log('Saved to database');
                   console.log("name " + req.body.username + "\npassword " + req.body.password  + "\nrights " + req.body.rights);
-                  res.redirect('pages/LoggedIn');
+                  res.render('pages/LoggedIn');
                 })
 
 
