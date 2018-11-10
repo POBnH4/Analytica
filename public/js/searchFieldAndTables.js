@@ -4,11 +4,6 @@
        app.controller('customersCtrl', function($scope) {
 
 
-
-
-
-
-
          var results = [];
 
       results = [{
