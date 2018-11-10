@@ -1,12 +1,12 @@
-
+ $(document).ready(function(){
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
 
-      
 
 
- $(document).ready(function(){
+
+
 
 
          var results = [];
