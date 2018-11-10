@@ -3,7 +3,6 @@
 
        app.controller('customersCtrl', function($scope) {
 
-      $(document).ready(function(){
 
 
 
