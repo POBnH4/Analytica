@@ -90,7 +90,7 @@ app.post('/registerDetails', function (req,res){
                 var info = {
                   "username":req.body.username,
                   "password": req.body.password,
-                  "rights": req.body.rigts
+                  "rights": req.body.rights
                 };
                 db.collection('users').save(info, function(err, result) {
                   if (err) throw err;
