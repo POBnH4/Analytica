@@ -84,23 +84,24 @@ dbo.collection("ALL_KEYS").find({ getParameter : '80'}, function(err, result) {
 }// use store to update table
 
 app.post('/registerDetails', function (req,res){
-        db.collection('users').count({"username":req.body.username, "password": req.body.password}).then((occurences) => {
+        db.collection('users').findOne({"username":req.body.username, "password": req.body.password}).then((occurences) => {
             if(occurences == USER_DOES_NOT_EXIST){
 
                 var info = {
-                  "name":req.body.username,
+                  "username":req.body.username,
                   "password": req.body.password,
-                  "rights": req.body.rigts
+                  "rights": req.body.rights
                 };
                 db.collection('users').save(info, function(err, result) {
                   if (err) throw err;
                   console.log('Saved to database');
                   console.log("name " + req.body.username + "\npassword " + req.body.password  + "\nrights " + req.body.rights);
-                  res.redirect('/');
+                  res.redirect('pages/LoggedIn');
                 })
 
+
            }else{
-             console.log("User already exists with that email!");
+             console.log("User already exists with that username!");
              res.redirect('/');
            }
          });
