@@ -25,6 +25,11 @@
 
 </head>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3b110ab226fe9b311216e4e4bb831f7f8bb200d1
 <body>
   <div id = "logo" class="logo text-center">
      <img src="img/logo.png" alt="logo" width="150">
@@ -69,8 +74,9 @@
         </div>
 
         <div class="subcription-info text-center">
+          <input required="" ng-model="searchText" ng-change="console.log($scope.searchText)" value="" placeholder="Search...." class="email" id="search" onkeydown="searchFormEffect()" name="search" type="name">
           <form class="subscribe_form" action="#" method="post" id="searchForm">
-            <input required="" value="" placeholder="Search...." class="email" id="search" onkeydown="searchFormEffect()" name="search" type="name">
+
             <input class="subscribe" name="email" value="Search!" type="submit" id= "searchSubmit">
           </form>
         </div>
@@ -87,7 +93,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in results">
+      <tr ng-repeat="x in results|filter:searchText">
 
          <td>{{x.key}}</td>
 
