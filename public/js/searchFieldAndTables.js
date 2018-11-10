@@ -2,7 +2,7 @@
        var app = angular.module('myApp', []);
        app.controller('customersCtrl', function($scope) {
 
-            $scope.searchText = "";
+          
           //  var results = []
 
 
