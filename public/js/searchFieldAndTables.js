@@ -419,19 +419,15 @@
          ]
 
          $( "#target" ).click(function() {
-  alert( "Handler for .click() called." );
+
+            for(var i = 0 ; i<results.length;i++){
+              if(results[i].keyType==="Tambour Unit"){
+                $scope.results.push(results[i])
+              }
+           }
 });
 
-         function TambourUnit(){
-           //
-           // for(var i = 0 ; i<results.length;i++){
-           //   if(results[i].keyType==="Tambour Unit"){
-           //     $scope.results.push(results[i])
-           //   }
-           // }
-           console.log("Hello");
 
-         }
 
 
 
