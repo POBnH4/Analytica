@@ -59,13 +59,21 @@ app.post('/dologin', function(req, res) {
         //..console.log('1');
           res.render('pages/Home');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
-    if(result.password == pword){ req.session.loggedin = true; req.session.currentuser = uname;
+    if(result.password == pword){
+        req.session.loggedin = true; req.session.currentuser = uname;
         console.log("Correct");
-      res.render('pages/LoggedIn') }
-    //otherwise send them back to login
-    else{
+        if(result.rights == "admin"){
+          res.render('pages/LoggedIn')
+        }else if(result.rights == "Level 1"){
+          res.render('pages/LoggedInLevelOne')
+        }else {
+          res.render('pages/LoggedInLevelTwo')
+        }
+      }else{     //otherwise send them back to login
+
         console.log('3');
-        res.render('pages/Home')}
+        res.render('pages/Home')
+      }
   //res.render('pages/homepage');
   });
 
@@ -96,7 +104,7 @@ app.post('/registerDetails', function (req,res){
                   if (err) throw err;
                   console.log('Saved to database');
                   console.log("name " + req.body.username + "\npassword " + req.body.password  + "\nrights " + req.body.rights);
-                  res.redirect('pages/LoggedIn');
+                  res.render('pages/LoggedIn');
                 })
 
 
