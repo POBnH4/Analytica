@@ -230,18 +230,11 @@ window.onclick = function(event) {
     </thead>
     <tbody>
       <tr ng-repeat="x in results|filter:searchText">
-         <!-- <td>{{x.key}}</td>
+         <td>{{x.key}}</td>
          <td>{{x.keyType}}</td>
-         <td>{{x.allocatedTo}}</td>
+         <td>{{x.allocatedTo</td>
          <td>{{x.location}}</td>
-       </tr> -->
-
-       <tr>
-  <td contenteditable="true">{{x.key}}</td>
-  <td contenteditable="true">{{x.keyType}}</td>
-  <td contenteditable="true">{{x.allocatedTo}}</td>
-  <td contenteditable="true">{{x.location}}</td>
-</tr>
+       </tr>
     </tbody>
   </table>
 </div>
