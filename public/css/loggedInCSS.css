@@ -18,12 +18,12 @@ body {
   height:45px !important;
 }
 
-a.nav-link.menuLink #navbarFirst{
+li:nth-child(1):before{
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 
-a.nav-link.menuLink #navbarLast{
+li:nth-child(9):before{
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
@@ -31,6 +31,7 @@ a.nav-link.menuLink #navbarLast{
 li{
   margin-left: auto !important;
   margin-right: auto !important;
+
 }
 
 a.nav-link.menuLink{
