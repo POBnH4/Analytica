@@ -6,7 +6,7 @@ body {
 }
 
 #homepageMenu{
-	background-color: rgb(123,123,123,0.2) !important;
+	background-color: rgb(123,123,123) !important;
   border-radius:50px;
   margin-left: 15% !important;
   height: 40px !important;
@@ -20,6 +20,10 @@ body {
 .nav-item{
   width:100px !important;
   height:45px !important;
+}
+
+#mainSearchForm{
+  margin-left: -5%;
 }
 
 #nav{
