@@ -420,36 +420,18 @@
            }
 
 
+            $scope.Home_func = function(){
 
+                $scope.results=[]
 
+                for(var i = 0 ; i<results.length;i++){
 
-           $scope.DoorKey_func = function(){
+                    $scope.results.push(results[i])
+                    //  console.log($scope.result[i])
 
-              $scope.results=[]
-              for(var i = 0 ; i<results.length;i++){
-                if(results[i].keyType==="Door Key"){
-
-                  $scope.results.push(results[i])
-                //  console.log($scope.result[i])
-
-                  //console.log("hello");
+                      //console.log("hello");
+                    }
                 }
-             }
-           }
-
-           
-                      $scope.Home_func = function(){
-
-                        $scope.results=[]
-
-                        for(var i = 0 ; i<results.length;i++){
-
-                            $scope.results.push(results[i])
-                          //  console.log($scope.result[i])
-
-                            //console.log("hello");
-                          }
-                      }
 
            $scope.TambourUnit_func = function(){
              $scope.results=[]
@@ -464,6 +446,94 @@
                 }
              }
            }
+
+           $scope.DoorKey_func = function(){
+
+             $scope.results=[]
+
+              for(var i = 0 ; i<results.length;i++){
+                if(results[i].keyType==="Door Key"){
+
+                  $scope.results.push(results[i])
+                //  console.log($scope.result[i])
+
+                  //console.log("hello");
+                }
+             }
+           }
+
+           $scope.MasterKeys_func = function(){
+
+             $scope.results=[]
+
+              for(var i = 0 ; i<results.length;i++){
+                if(results[i].keyType==="MASTER"){
+
+                  $scope.results.push(results[i])
+                //  console.log($scope.result[i])
+
+                  //console.log("hello");
+                }
+             }
+
+
+           }
+
+           $scope.Pedestal_func = function(){
+
+             $scope.results=[]
+
+              for(var i = 0 ; i<results.length;i++){
+                if(results[i].keyType==="Pedestal"){
+
+                  $scope.results.push(results[i])
+                //  console.log($scope.result[i])
+
+                  //console.log("hello");
+                }
+             }
+
+
+           }
+
+              // $scope.FobKeys_func = function(){
+              //
+              //     $scope.results=[]
+              //
+              //    for(var i = 0 ; i<results.length;i++){
+              //      if(results[i].keyType==="Fob Keys"){
+              //
+              //    $scope.results.push(results[i])
+              //  //  console.log($scope.result[i])
+              //
+              //        //console.log("hello");
+              //    }
+              //
+              //     }
+              //
+              //   }
+
+           $scope.UnkownKeys_func = function(){
+
+             $scope.results=[]
+
+              for(var i = 0 ; i<results.length;i++){
+                if(results[i].keyType===""){
+
+                  $scope.results.push(results[i])
+                //  console.log($scope.result[i])
+
+                  //console.log("hello");
+                }
+             }
+
+
+           }
+
+
+
+
+
 
 
 
