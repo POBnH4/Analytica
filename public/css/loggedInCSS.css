@@ -18,7 +18,8 @@ body {
   height:45px !important;
 }
 #navbarResponsive{
-  background-color: rgb(123,123,123) !important;
+  height:40px;
+  background-color: rgb(2,123,223) !important;
 }
 form.ng-pristine.ng-valid{
   margin-left: -2% !important;
