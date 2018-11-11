@@ -85,12 +85,12 @@ window.onclick = function(event) {
                     <a class="nav-link menuLink" > &nbsp; &nbsp;  Fob</a>
                   </li>
                   <li class="nav-item" ng-click="UnkownKeys_func()">
-                    <a class="nav-link menuLink" id="unknownID">Unknown</a>
+                    <a class="nav-link menuLink" >Unknown</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link menuLink" href="/logout">&nbsp;Logout</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" id = "register" >
                     <a class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</a>
                   </li>
                 </ul>
@@ -101,7 +101,7 @@ window.onclick = function(event) {
 
           </div>
 
-          <form action="">
+          <form >
             <input type="search" ng-model="searchText">
             <i class="fa fa-search"></i>
           </form>
