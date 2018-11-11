@@ -422,12 +422,22 @@
                 $scope.results.push(results[i])
               //  console.log($scope.result[i])
 
-                console.log("hello");
+                //console.log("hello");
               }
            }
 
            $scope.myFunc = function(){
-             console.log("Hello");
+             $scope.results=[]
+
+              for(var i = 0 ; i<results.length;i++){
+                if(results[i].keyType==="Door Key"){
+
+                  $scope.results.push(results[i])
+                //  console.log($scope.result[i])
+
+                  //console.log("hello");
+                }
+             }
            }
 
   })
