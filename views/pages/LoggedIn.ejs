@@ -207,7 +207,7 @@ window.onclick = function(event) {
             <div class="container">
               <div class="collapse navbar-collapse" id="navbarResponsive  ">
                 <ul id= "homepageMenu" class="navbar-nav ml-auto">
-                  <li class="nav-item">
+                  <li class="nav-item" ng-click=Home_func()>
                     <a class="nav-link menuLink" >Home</a>
                   </li>
                   <li class="nav-item" ng-click="TambourUnit_func()">
@@ -261,10 +261,10 @@ window.onclick = function(event) {
     </thead>
     <tbody>
       <tr ng-repeat="x in results|filter:searchText">
-         <td>{{x.key}}</td>
-         <td>{{x.keyType}}</td>
-         <td>{{x.allocatedTo}}</td>
-         <td>{{x.location}}</td>
+         <td contenteditable='true' ng-model={{x.key}}>{{x.key}}</td>
+          <td contenteditable='true'ng-model={{x.keyType}}>{{x.keyType}}</td>
+         <td contenteditable='true'ng-model={{x.allocatedTo}}>{{x.allocatedTo}}</td>
+          <td contenteditable='true'ng-model={{x.location}}>{{x.location}}</td>
        </tr>
     </tbody>
   </table>
