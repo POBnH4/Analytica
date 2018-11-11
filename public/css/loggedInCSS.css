@@ -24,6 +24,10 @@ li{
 
 }
 
+#nav{
+  margin-left: -5%;
+}
+
 a.nav-link.menuLink{
   color:white !important;
   background-color: rgb(0,0,0,0.5) !important;
