@@ -18,12 +18,12 @@ body {
   height:45px !important;
 }
 
-li:nth-child(1):before{
+li:nth-child(1){
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 
-li:nth-child(9):before{
+li:nth-child(9){
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
