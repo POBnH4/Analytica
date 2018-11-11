@@ -202,11 +202,8 @@ window.onclick = function(event) {
                   <li class="nav-item">
                     <a class="nav-link menuLink" >Unknown Keys</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link menuLink" >Logout</a>
-                  </li>
                   <li id = "register" class="nav-item">
-                    <a class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</a>
+                    <button class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</button>
                   </li>
                 </ul>
               </div>
@@ -233,7 +230,7 @@ window.onclick = function(event) {
     </thead>
     <tbody>
       <tr ng-repeat="x in results|filter:searchText">
-         <td> <input type="text" ng-model="x.key"/>{{x.key}}</td>
+         <td> {{x.key}}</td>
           <td >{{x.keyType}}</td>
          <td>{{x.allocatedTo}}</td>
           <td>{{x.location}}</td>
