@@ -413,7 +413,7 @@
          ]
 
 
-$scope.myFunc={
+
            $scope.results=[]
 
             for(var i = 0 ; i<results.length;i++){
@@ -427,7 +427,7 @@ $scope.myFunc={
            }
 
 
-}
+
 
 
 
