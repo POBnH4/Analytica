@@ -202,8 +202,11 @@ window.onclick = function(event) {
                   <li class="nav-item" ng-click="UnkownKeys_func()">
                     <a class="nav-link menuLink" >Unknown Keys</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link menuLink" method = "GET" action="/logout">Logout</a>
+                  </li>
                   <li id = "register" class="nav-item">
-                    <button class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</button>
+                    <a class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</a>
                   </li>
                 </ul>
               </div>
