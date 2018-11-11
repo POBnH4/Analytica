@@ -426,7 +426,7 @@
               }
            }
 
-           $scope.myFunc = function(){
+           $scope.DoorKey_func = function(){
              $scope.results=[]
 
               for(var i = 0 ; i<results.length;i++){
