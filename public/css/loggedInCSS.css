@@ -21,7 +21,9 @@ body {
 a.nav-link.menuLink{
   background-color: rgb(0,0,0) !important;
 }
-
+#navbarResponsive{
+  height:40px;
+}
 form.ng-pristine.ng-valid{
   margin-left: -2% !important;
 }
