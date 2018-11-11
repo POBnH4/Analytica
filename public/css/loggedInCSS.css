@@ -13,17 +13,13 @@ body {
   width:80% !important;
 }
 
-#navbarResponsive{
-  background-color: rgb(123,123,123,0.2) !important;
-}
-
 .nav-item{
   width:100px !important;
   height:45px !important;
 }
 
 #mainSearchForm{
-  margin-left: -5%;
+  margin-left: -25% !important;
 }
 
 #nav{
