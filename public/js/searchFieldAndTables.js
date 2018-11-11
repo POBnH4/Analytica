@@ -3,7 +3,7 @@
 
        app.controller('customersCtrl', function($scope) {
 
-$scope.myFunc={
+
 
 
          var results = [];
@@ -412,6 +412,8 @@ $scope.myFunc={
           }
          ]
 
+
+$scope.myFunc={
            $scope.results=[]
 
             for(var i = 0 ; i<results.length;i++){
