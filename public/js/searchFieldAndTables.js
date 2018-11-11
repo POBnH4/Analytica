@@ -412,6 +412,7 @@
           }
          ]
 
+          $scope.results=[]
          for(var i = 0 ; i<results.length;i++){
 
              $scope.results.push(results[i])
@@ -419,13 +420,13 @@
 
              //console.log("hello");
            }
-        
+
 
 
 
 
            $scope.DoorKey_func = function(){
-             $scope.results=[]
+
 
               for(var i = 0 ; i<results.length;i++){
                 if(results[i].keyType==="Door Key"){
