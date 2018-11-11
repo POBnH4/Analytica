@@ -230,7 +230,7 @@ window.onclick = function(event) {
     </thead>
     <tbody>
       <tr ng-repeat="x in results|filter:searchText">
-         <td>{{x.key}}</td>
+         <td> <input type="text" ng-model="x.key"/>{{x.key}}</td>
           <td >{{x.keyType}}</td>
          <td>{{x.allocatedTo}}</td>
           <td>{{x.location}}</td>
