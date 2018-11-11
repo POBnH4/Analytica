@@ -147,32 +147,6 @@ span.psw {
        width: 100%;
     }
 }
-
-input{
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
-input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-    width: 20%;
-}
 </style>
 
 <script>
@@ -207,7 +181,7 @@ window.onclick = function(event) {
             <div class="container">
               <div class="collapse navbar-collapse" id="navbarResponsive  ">
                 <ul id= "homepageMenu" class="navbar-nav ml-auto">
-                  <li class="nav-item" ng-click=Home_func()>
+                  <li class="nav-item">
                     <a class="nav-link menuLink" >Home</a>
                   </li>
                   <li class="nav-item" ng-click="TambourUnit_func()">
@@ -228,11 +202,8 @@ window.onclick = function(event) {
                   <li class="nav-item">
                     <a class="nav-link menuLink" >Unknown Keys</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link menuLink"  action="/logout" >Logout</a>
-                  </li>
                   <li id = "register" class="nav-item">
-                    <a class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</a>
+                    <button class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</button>
                   </li>
                 </ul>
               </div>
@@ -242,9 +213,7 @@ window.onclick = function(event) {
 
           </div>
 
-          <form>
-            <input type="text" name="search" placeholder="Search..">
-          </form>
+          <input id = "searchbar" type ="text" ng-model="searchText">
 
 
 
@@ -261,10 +230,10 @@ window.onclick = function(event) {
     </thead>
     <tbody>
       <tr ng-repeat="x in results|filter:searchText">
-         <td contenteditable='true' ng-model={{x.key}}>{{x.key}}</td>
-          <td contenteditable='true'ng-model={{x.keyType}}>{{x.keyType}}</td>
-         <td contenteditable='true'ng-model={{x.allocatedTo}}>{{x.allocatedTo}}</td>
-          <td contenteditable='true'ng-model={{x.location}}>{{x.location}}</td>
+         <td>{{x.key}}</td>
+         <td>{{x.keyType}}</td>
+         <td>{{x.allocatedTo}}</td>
+         <td>{{x.location}}</td>
        </tr>
     </tbody>
   </table>
@@ -295,6 +264,7 @@ window.onclick = function(event) {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('registerButtonID').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
