@@ -22,11 +22,7 @@ a.nav-link.menuLink{
   border-radius: 50px;
   background-color: rgb(0,0,0,0.5) !important;
 }
-#navbarResponsive{
-  background-color: none !important;
 
-  height:40px;
-}
 form.ng-pristine.ng-valid{
   margin-left: -2% !important;
 }
