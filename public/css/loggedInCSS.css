@@ -17,10 +17,11 @@ body {
   width:100px !important;
   height:45px !important;
 }
-#navbarResponsive{
-  height:40px;
-  background-color: rgb(2,123,223) !important;
+
+a.nav-link.menuLink{
+  background-color: rgb(0,0,0) !important;
 }
+
 form.ng-pristine.ng-valid{
   margin-left: -2% !important;
 }
