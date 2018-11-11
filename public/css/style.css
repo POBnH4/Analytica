@@ -37,9 +37,7 @@ table {
 }
 
 /* - - -- - - - - -- - - - CHANGE COLOR OF NAV BAR MENU - - -- - -  - - - -  - -- --  - - -  */
-#homepageMenu{
-	background-color: color(0,0,0,0.5);
-}
+
 
 #table{
 	margin-bottom: 5%;
