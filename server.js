@@ -38,9 +38,14 @@ app.get('/', function(req,res) {
 });
 
 
+//- - - - - - - - - - - - - - - logout feature - - - - - - - - - - - - -
 
-
-
+app.get('/logout', function(req,res){
+  req.session.loggedin = false;
+  req.session.destroy();
+  res.redirect('/')
+});
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 //the dologin route deals with the data from the login screen.
 //the post variables, username and password come from the form on the login page.

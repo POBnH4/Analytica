@@ -147,6 +147,32 @@ span.psw {
        width: 100%;
     }
 }
+
+input{
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 20%;
+}
 </style>
 
 <script>
@@ -202,8 +228,11 @@ window.onclick = function(event) {
                   <li class="nav-item">
                     <a class="nav-link menuLink" >Unknown Keys</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link menuLink"  action="/logout" >Logout</a>
+                  </li>
                   <li id = "register" class="nav-item">
-                    <button class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</button>
+                    <a class="nav-link menuLink"  onclick="document.getElementById('registerButtonID').style.display='block'" data-toggle="modal" data-target="#response">Register</a>
                   </li>
                 </ul>
               </div>
@@ -213,7 +242,9 @@ window.onclick = function(event) {
 
           </div>
 
-          <input type ="text" ng-model="searchText">
+          <form>
+            <input type="text" name="search" placeholder="Search..">
+          </form>
 
 
 
@@ -264,7 +295,6 @@ window.onclick = function(event) {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('registerButtonID').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
