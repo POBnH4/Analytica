@@ -19,10 +19,11 @@ body {
 }
 
 a.nav-link.menuLink{
+  border-radius: 50px;
   background-color: rgb(0,0,0,0.5) !important;
 }
 #navbarResponsive{
-  background-color: rgb(123,123,123) !important;
+  background-color: none !important;
 
   height:40px;
 }
