@@ -426,10 +426,8 @@
               }
            }
 
-
-
-
-
-
+           $scope.myFunc = function(){
+             console.log("Hello");
+           }
 
   })
