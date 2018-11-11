@@ -44,6 +44,7 @@ app.get('/logout', function(req,res){
   req.session.loggedin = false;
   req.session.destroy();
   res.redirect('/')
+  console.log("logging out")
 });
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
