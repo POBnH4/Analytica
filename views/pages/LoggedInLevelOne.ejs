@@ -218,18 +218,18 @@ window.onclick = function(event) {
       <table class="table table-dark">
     <thead>
       <tr>
-        <th contenteditable="true" scope="col">ID</th>
-        <th contenteditable="true" scope="col">Key Type</th>
-        <th contenteditable="true" scope="col">Allocated To</th>
-        <th contenteditable="true" scope="col">Location</th>
+        <th scope="col">ID</th>
+        <th scope="col">Key Type</th>
+        <th scope="col">Allocated To</th>
+        <th scope="col">Location</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="x in results">
-         <td>{{x.key}}</td>
-         <td>{{x.keyType}}</td>
-         <td>{{x.allocatedTo}}</td>
-         <td>{{x.location}}</td>
+         <td contenteditable="true">{{x.key}}</td>
+         <td contenteditable="true">{{x.keyType}}</td>
+         <td contenteditable="true">{{x.allocatedTo}}</td>
+         <td contenteditable="true">{{x.location}}</td>
        </tr>
     </tbody>
   </table>
