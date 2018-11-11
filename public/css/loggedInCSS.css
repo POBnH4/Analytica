@@ -18,7 +18,7 @@ body {
   height:45px !important;
 }
 
-#mainSearchForm{
+form.ng-pristine.ng-valid{
   margin-left: -25% !important;
 }
 
