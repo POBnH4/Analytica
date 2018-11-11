@@ -430,21 +430,6 @@
              }
            }
 
-           $scope.TambourUnit_func=function{
-
-             $scope.results=[]
-
-              for(var i = 0 ; i<results.length;i++){
-                if(results[i].keyType==="Tambour Unit"){
-
-                  $scope.results.push(results[i])
-                //  console.log($scope.result[i])
-
-                  //console.log("hello");
-                }
-             }
-
-
-           }
+        
 
   })
