@@ -13,10 +13,6 @@ body {
   width:80% !important;
 }
 
-#fobID{
-  margin-left: 5% !important;
-}
-
 .nav-item{
   width:100px !important;
   height:45px !important;
@@ -30,6 +26,11 @@ a.nav-link.menuLink #navbarFirst{
 a.nav-link.menuLink #navbarLast{
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+li{
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 a.nav-link.menuLink{
