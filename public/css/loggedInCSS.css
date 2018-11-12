@@ -133,6 +133,9 @@ span.psw {
     cursor: pointer;
 }
 
+#registerForm{
+	width: 200px;
+}
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
