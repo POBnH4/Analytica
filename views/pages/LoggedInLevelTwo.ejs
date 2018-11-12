@@ -28,8 +28,27 @@
   <script src="js/custom.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/loggedInCSS.css">
-
 </head>
+
+<style>
+
+</style>
+
+<script>
+
+
+var modal = document.getElementById('registerButtonID');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+
 
 <body>
   <div id = "logo" class="logo text-center">
@@ -45,7 +64,7 @@
         <div id = "nav">
           <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-              <div class="collapse navbar-collapse" id="navbarResponsive  ">
+              <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul id= "homepageMenu" class="navbar-nav ml-auto">
                   <li class="nav-item" ng-click="Home_func()">
                     <a class="nav-link menuLink" >Home</a>
@@ -54,7 +73,7 @@
                     <a class="nav-link menuLink">Tambour</a>
                   </li>
                   <li class="nav-item" ng-click="DoorKey_func()">
-                    <a class="nav-link menuLink">Door</a>
+                    <a class="nav-link menuLink">&nbsp; Door</a>
                   </li>
                   <li class="nav-item" ng-click="MasterKeys_func()">
                     <a class="nav-link menuLink">Master</a>
@@ -63,13 +82,13 @@
                     <a class="nav-link menuLink" >Pedestal</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link menuLink" >Fob</a>
+                    <a class="nav-link menuLink" > &nbsp; &nbsp;  Fob</a>
                   </li>
                   <li class="nav-item" ng-click="UnkownKeys_func()">
                     <a class="nav-link menuLink" >Unknown</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link menuLink" href="/logout">Logout</a>
+                    <a class="nav-link menuLink" href="/logout">&nbsp;Logout</a>
                   </li>
                 </ul>
               </div>
@@ -79,14 +98,14 @@
 
           </div>
 
-          <form id = "mainSearchForm" action="">
+          <form >
             <input type="search" ng-model="searchText">
             <i class="fa fa-search"></i>
           </form>
 
 
 
-      <table class="table table-hover table-dark">
+      <table class="table table-stripped table-dark">
     <thead>
 
       <tr>
@@ -108,6 +127,15 @@
 </div>
     </div>
   </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('registerButtonID').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
 
 </body>
 
