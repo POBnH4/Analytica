@@ -60,16 +60,16 @@ body {
     transition: all 1s;
 }
 
-.SearchForm:hover{
+.InputSearch:hover{
     width: 200px;
     cursor: pointer;
 }
 
-.SearchForm:hover input{
+.InputSearch:hover .search{
     display: block;
 }
 
-.SearchForm:hover .fa{
+.InputSearch:hover .fa{
     background: #07051a;
     color: white;
 }
