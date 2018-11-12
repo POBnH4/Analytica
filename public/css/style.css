@@ -15,7 +15,7 @@ body {
     background: #07051a;
 }
 
-form{
+.SearchForm{
     position: relative;
     top: 50%;
     left: 50%;
@@ -30,7 +30,7 @@ form{
     padding: 5px;
 }
 
-input{
+.InputSearch{
     position: absolute;
     top: 0;
     left: 0;
@@ -60,16 +60,16 @@ input{
     transition: all 1s;
 }
 
-form:hover{
+.SearchForm:hover{
     width: 200px;
     cursor: pointer;
 }
 
-form:hover input{
+.SearchForm:hover input{
     display: block;
 }
 
-form:hover .fa{
+.SearchForm:hover .fa{
     background: #07051a;
     color: white;
 }
