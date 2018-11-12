@@ -73,9 +73,8 @@ app.post('/dologin', function(req, res) {
           res.render('pages/LoggedInLevelTwo')
         }else if(result.rights == "Level 1"){
           res.render('pages/LoggedInLevelOne')
-        }else {
+        }else
           res.render('pages/LoggedIn')
-
         }
       }else{     //otherwise send them back to login
 
