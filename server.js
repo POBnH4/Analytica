@@ -74,6 +74,7 @@ app.post('/dologin', function(req, res) {
         }else if(result.rights == "Level 1"){
           res.render('pages/LoggedInLevelOne')
         }else {
+  
           res.render('pages/LoggedIn')
 
         }

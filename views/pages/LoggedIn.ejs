@@ -101,8 +101,8 @@ window.onclick = function(event) {
 
           </div>
 
-          <form >
-            <input type="search" ng-model="searchText">
+          <form class ="Search">
+            <input class ="input" type="search" ng-model="searchText">
             <i class="fa fa-search"></i>
           </form>
 
@@ -120,10 +120,10 @@ window.onclick = function(event) {
     </thead>
     <tbody>
       <tr ng-repeat="x in results|filter:searchText">
-          <td contenteditable="true"> {{x.key}}</td>
-          <td contenteditable="true">{{x.keyType}}</td>
+          <td> {{x.key}}</td>
+          <td>{{x.keyType}}</td>
           <td contenteditable="true"> {{x.allocatedTo}}</td>
-          <td contenteditable="true">{{x.location}}</td>
+          <td>{{x.location}}</td>
        </tr>
     </tbody>
   </table>
