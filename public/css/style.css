@@ -74,6 +74,14 @@ body {
     color: white;
 }
 
+thead{
+  background: #343a40
+}
+
+tbody{
+  background: #6c757d'
+}
+
 
 ol, ul {
 	list-style: none;
