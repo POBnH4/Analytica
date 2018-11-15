@@ -7,14 +7,13 @@ body {
 
 #homepageMenu{
 	background-color: rgb(123,123,123) !important;
-  border-radius:50px;
   margin-left: 15% !important;
   height: 40px !important;
   width:80% !important;
 }
 
 .nav-item{
-  width:100px;
+  width:120px;
   height:45px !important;
 }
 
